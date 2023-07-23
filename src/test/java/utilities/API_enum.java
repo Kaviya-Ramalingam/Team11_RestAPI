@@ -2,7 +2,11 @@ package utilities;
 
 public enum API_enum {
 	
-	AddProgram("/saveprogram");
+	AddProgram("/saveprogram"),
+	AddBatch("/batches"),
+	GetallProgs("/allPrograms"),
+	GetByProgID("/programs/{{PostRequestSteps.progID_env}}");
+	
 	
 	private String resource;
 	API_enum(String resource)
