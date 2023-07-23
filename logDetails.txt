@@ -1,0 +1,66 @@
+Request method:	POST
+Request URI:	https://lms-api-hackathon-june2023-930a8b0f895d.herokuapp.com/lms/saveprogram
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "programDescription": "Selenium",
+    "programName": "Jul23-GoogleSurvivors-SDET-1555812466",
+    "programStatus": "active"
+}
+HTTP/1.1 201 
+Server: Cowboy
+Connection: keep-alive
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Sun, 23 Jul 2023 13:54:04 GMT
+Via: 1.1 vegur
+
+{
+    "programId": 11824,
+    "programName": "Jul23-GoogleSurvivors-SDET-1555812466",
+    "programDescription": "Selenium",
+    "programStatus": "active",
+    "creationTime": "2023-07-23T13:54:04.755+00:00",
+    "lastModTime": "2023-07-23T13:54:04.755+00:00"
+}
+Request method:	POST
+Request URI:	https://lms-api-hackathon-june2023-930a8b0f895d.herokuapp.com/lms/saveprogram
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "programDescription": "Postman",
+    "programName": "Jul23-GoogleSurvivors-SDET-1455148770",
+    "programStatus": "inactive"
+}
+HTTP/1.1 201 
+Server: Cowboy
+Connection: keep-alive
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Sun, 23 Jul 2023 13:54:06 GMT
+Via: 1.1 vegur
+
+{
+    "programId": 11825,
+    "programName": "Jul23-GoogleSurvivors-SDET-1455148770",
+    "programDescription": "Postman",
+    "programStatus": "inactive",
+    "creationTime": "2023-07-23T13:54:06.808+00:00",
+    "lastModTime": "2023-07-23T13:54:06.808+00:00"
+}
