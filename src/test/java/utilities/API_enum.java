@@ -5,8 +5,8 @@ public enum API_enum {
 	AddProgram("/saveprogram"),
 	AddBatch("/batches"),
 	GetallProgs("/allPrograms"),
-	GetByProgID("/programs/{{PostRequestSteps.progID_env}}");
-	
+	GetByProgID("/programs/{{PostRequestSteps.progID_env}}"),
+	AddUsers("/users/users/roleStatus");
 	
 	private String resource;
 	API_enum(String resource)

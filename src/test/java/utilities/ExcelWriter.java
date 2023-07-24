@@ -30,10 +30,10 @@ public class ExcelWriter {
 		
 		
 		
-		 //Fis= new FileInputStream(path);
+		 Fis= new FileInputStream(path);
 	
-		 //workbook = new XSSFWorkbook(Fis);
-		 workbook = new XSSFWorkbook();
+		 workbook = new XSSFWorkbook(Fis);
+		// workbook = new XSSFWorkbook();
 		 if(workbook.getSheetIndex(sheetname)==-1)
 		  
 		   workbook.createSheet(sheetname); 

@@ -25,9 +25,9 @@ public class PostRequestSteps extends Utils {
 	ResponseSpecification res1;
 	RequestSpecification req1;
 	Response response;
-	public static String progID_env,Pname_env,bacthId_env,Bname_env;
+	public static String progID_env,Pname_env,bacthId_env,Bname_env,userId_env,CreateTime_env;
 	TestData data=new TestData();
-	//ExcelWriter xlwrite = new ExcelWriter("./src/test/resources/Response_data.xlsx");
+	ExcelWriter xlwrite = new ExcelWriter("./src/test/resources/Response_data.xlsx");
 
 	@Given("user creates POST request for the LMS API endpoint from  {string} and {string}")
 	public void user_creates_post_request_for_the_lms_api_endpoint_from_and(String string, String string2) throws IOException
@@ -46,11 +46,11 @@ public class PostRequestSteps extends Utils {
 	@When("user call {string} with {string} http request")
 	public void user_call_with_http_request(String resource, String method)
 	{
-		System.out.println("in when statement");
+		
 		API_enum resource_api = API_enum.valueOf(resource);
 		if (method.equalsIgnoreCase("POST"))
 		{
-			System.out.println("in if statement");
+			
 		response = req1.post(resource_api.getresource())
 		.then()
 		.log().all()
@@ -73,10 +73,13 @@ public class PostRequestSteps extends Utils {
 	{
 		progID_env = getJsonPath(response, "programId");
 		Pname_env=getJsonPath(response, "programName");
-		/*xlwrite.setcelldata("Response_data",0,0,"programID");
-		xlwrite.setcelldata("Response_data",0,1,progID_env);
-		xlwrite.setcelldata("Response_data",1,0,"programname");
-		xlwrite.setcelldata("Response_data",1,2,Pname_env);*/
+		CreateTime_env=getJsonPath(response, "creationTime");
+		xlwrite.setcelldata("Response_Program",0,0,"programID");
+		xlwrite.setcelldata("Response_Program",0,1,progID_env);
+		xlwrite.setcelldata("Response_Program",1,0,"programname");
+		xlwrite.setcelldata("Response_Program",1,1,Pname_env);
+		xlwrite.setcelldata("Response_Program",2,0,"creationTime");
+		xlwrite.setcelldata("Response_Program",2,1,CreateTime_env);
 	   
 	}
 	
@@ -105,11 +108,45 @@ public class PostRequestSteps extends Utils {
 		bacthId_env = getJsonPath(response, "batchId");
 
 		Bname_env=getJsonPath(response, "batchName");
-		/*xlwrite.setcelldata("Response_data",1,0,"batchID");
-		xlwrite.setcelldata("Response_data",1,1,batch_ID);*/
+		
+		xlwrite.setcelldata("Response_Batch",0,0,"batchID");
+		xlwrite.setcelldata("Response_Batch",0,1,bacthId_env);
+		xlwrite.setcelldata("Response_Batch",1,0,"batchName");
+		xlwrite.setcelldata("Response_Batch",1,1,Bname_env);
+		
 	}
 
 
+/** Creating USers steps  ****/
+	
+	@Given("user creates User POST request for the LMS API endpoint from  {string} and {string}")
+	public void user_creates_user_post_request_for_the_lms_api_endpoint_from_and(String string, String string2) throws IOException {
+		
+		req1 = given().spec(requestSpecification()).body(data.UserPayload(string,string2));
+		res1=new ResponseSpecBuilder().expectStatusCode(201).build();
+	}
+	
+	@Then("API call for User module is success with status code201")
+	public void api_call_for_user_module_is_success_with_status_code201() {
+		response.then().assertThat().header("Content-Type","application/json")
+		.statusCode(201)
+		.assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath("UserSchema.json"));
+	   
+	}
+	@Then("verify the userID in json Response body")
+	public void verify_the_user_id_in_json_response_body() {
+		userId_env = getJsonPath(response, "userId");
+		/*
+		bacthId_env = getJsonPath(response, "batchId");
+
+		Bname_env=getJsonPath(response, "batchName");
+		
+		xlwrite.setcelldata("Response_Batch",0,0,"batchID");
+		xlwrite.setcelldata("Response_Batch",0,1,bacthId_env);
+		xlwrite.setcelldata("Response_Batch",1,0,"batchName");
+		xlwrite.setcelldata("Response_Batch",1,1,Bname_env);*/
+		
+	}
 
 
 	
