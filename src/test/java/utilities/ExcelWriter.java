@@ -30,10 +30,10 @@ public class ExcelWriter {
 		
 		
 		
-		 //Fis= new FileInputStream(path);
-		Fos = new FileOutputStream(path);
-		 //workbook = new XSSFWorkbook(Fis);
-		 workbook = new XSSFWorkbook();
+		 Fis= new FileInputStream(path);
+	
+		 workbook = new XSSFWorkbook(Fis);
+		// workbook = new XSSFWorkbook();
 		 if(workbook.getSheetIndex(sheetname)==-1)
 		  
 		   workbook.createSheet(sheetname); 
@@ -48,7 +48,7 @@ public class ExcelWriter {
 		  sheet.getRow(rownum).createCell(cellnum).setCellValue(data);
 	
 			 
-		 
+		  Fos = new FileOutputStream(path);
 		  workbook.write(Fos); 
 		  workbook.close(); 
 		// Fis.close();
