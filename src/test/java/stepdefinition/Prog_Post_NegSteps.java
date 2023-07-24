@@ -64,7 +64,7 @@ public class Prog_Post_NegSteps extends Utils{
 		List<String> data=ExcelUtility.getData(string,string2);
 		
 		
-		
+		map.put("programName","");
 		map.put("programDescription",data.get(1));
 		map.put("programStatus",data.get(2));
 		
@@ -87,7 +87,7 @@ public class Prog_Post_NegSteps extends Utils{
 	@Then("User receives internal server error")
 	public void user_receives_internal_server_error() {
 		response.then().assertThat().header("Content-Type","application/json")
-		.statusCode(500);
+		.statusCode(400);
 		
 		
 	}
