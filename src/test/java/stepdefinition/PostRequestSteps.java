@@ -28,6 +28,12 @@ public class PostRequestSteps extends Utils {
 	public static String progID_env,Pname_env,bacthId_env,Bname_env,userId_env,CreateTime_env;
 	TestData data=new TestData();
 	ExcelWriter xlwrite = new ExcelWriter("./src/test/resources/Response_data.xlsx");
+	
+	@Given("User sets authorization to NO Auth")
+	public void user_sets_authorization_to_NO_Auth()
+	{
+		given().auth().none();
+	}
 
 	@Given("user creates POST request for the LMS API endpoint from  {string} and {string}")
 	public void user_creates_post_request_for_the_lms_api_endpoint_from_and(String string, String string2) throws IOException

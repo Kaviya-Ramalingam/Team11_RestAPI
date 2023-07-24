@@ -15,8 +15,8 @@ public class TestData {
 	public  HashMap<String,Object> programPayload(String testcasename,String sheetname) throws IOException
 	{
 		
-		ExcelUtility d=new ExcelUtility();
-		List<String> data=d.getData(testcasename,sheetname);
+		
+		List<String> data=ExcelUtility.getData(testcasename,sheetname);
 		Random randomNum = new Random();
 		String prog_name="Jul23-GoogleSurvivors-SDET-"+randomNum.nextInt();
 		
@@ -35,8 +35,8 @@ public class TestData {
 	public  HashMap<String,Object> BatchPayload(String testcasename,String sheetname) throws IOException
 	{
 		
-		ExcelUtility d=new ExcelUtility();
-		List<String> data=d.getData(testcasename,sheetname);
+		
+		List<String> data=ExcelUtility.getData(testcasename,sheetname);
 		Random randomNum = new Random();
 		String batch_name="Jul23-GoogleSurvivors-SDET-SDET01-"+randomNum.nextInt();
 		
@@ -57,12 +57,16 @@ public class TestData {
 	public  HashMap<String,Object> UserPayload(String testcasename,String sheetname) throws IOException
 	{
 		
-		ExcelUtility d=new ExcelUtility();
-		List<String> data=d.getData(testcasename,sheetname);
-		Random randomNum = new Random();
-		String User_name="U"+randomNum.nextInt();
-		int phone=(new Random()).nextInt(900000000) + 100000;
 		
+		List<String> data=ExcelUtility.getData(testcasename,sheetname);
+		Random randomNum = new Random();
+		String User_name="GoogleSurvivors-"+randomNum.nextInt();
+	
+	int phone=randomNum.nextInt(10);
+		HashMap<String,Object> map=new HashMap<String, Object>();
+		
+		map.put("roleId",data.get(12));
+		map.put("userRoleStatus",data.get(13));
 		
 		HashMap<String,Object> userdata=new HashMap<String, Object>();
 		
@@ -74,17 +78,14 @@ public class TestData {
 		userdata.put("userLastName",data.get(4));
 		userdata.put("userLinkedinUrl",data.get(5));
 		userdata.put("userLocation",data.get(6));
-		userdata.put("userMiddleName",data.get(7));
+		userdata.put("userMiddleName",data.get(8));
 		userdata.put("userPhoneNumber",phone);
+		userdata.put("userRoleMaps",map);
 		
-		userdata.put("roleId",data.get(11));
-		userdata.put("userRoleStatus",data.get(12));
-		userdata.put("userVisaStatus",data.get(19));
-		
-		userdata.put("userTimeZone",data.get(15));
-		
-		
+		userdata.put("userTimeZone",data.get(16));
+		userdata.put("userVisaStatus",data.get(20));
 		System.out.println(userdata);
+	
 		return userdata;
 	}
 

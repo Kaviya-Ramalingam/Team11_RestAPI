@@ -1,6 +1,9 @@
 
 @AllPost
 Feature: post request of all modules
+
+Background: User sets Authorization
+			Given User sets authorization to NO Auth
   
   @programpost
   Scenario Outline: check if user able to create a program with valid endpoint and request body

@@ -14,7 +14,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class ExcelUtility {
 	
-	public ArrayList<String> getData(String testcaseName,String sheetName) throws IOException
+	public static ArrayList<String> getData(String testcaseName,String sheetName) throws IOException
 	{
 		//fileInputStream argument
 				ArrayList<String> a=new ArrayList<String>();
