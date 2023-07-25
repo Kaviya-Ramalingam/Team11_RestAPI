@@ -8,12 +8,13 @@ public enum API_enum {
 	GetByProgID("/programs/{{PostRequestSteps.progID_env}}"),
 	AddUsers("/users/users/roleStatus"),
 	AddAssignment("/assignments"),
-	SubmitAssgn("/assignmentsubmission");
+	SubmitAssgn("/assignmentsubmission"),
 	DeleteProgramID("/deletebyprogid/"),
 	DeleteProgramName("/deletebyprogname/"),
 	DeleteBatchID("/batches/"),
 	DeleteUserID("/users/users/"),
-	DeleteassignID("/assignments/");
+	DeleteassignID("/assignments/"),
+	DelSubmitID("/assignmentsubmission/");
 
 	private String resource;
 	API_enum(String resource)
