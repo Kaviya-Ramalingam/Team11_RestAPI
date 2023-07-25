@@ -102,6 +102,7 @@ public class TestData {
 	
 		return userdata;
 	}
+	
 	public  HashMap<String, Object> AssignPayload(String testcasename,String sheetname) throws IOException
 	{
 		
@@ -137,6 +138,49 @@ public class TestData {
 		
 		System.out.println(assdata);
 		return assdata;
+	}
+	
+	public  HashMap<String, Object> AssignSubmitPayload(String testcasename,String sheetname) throws IOException
+	{
+		
+		List<String> data=ExcelUtility.getData(testcasename,sheetname);
+		
+		
+		final SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		Timestamp sub_datestamp = new Timestamp(System.currentTimeMillis());
+		Calendar cal = Calendar.getInstance();
+		
+		//submit date is +2 days of current date
+		cal.setTimeInMillis(sub_datestamp.getTime());
+	    cal.add(Calendar.DAY_OF_MONTH,2);
+	    sub_datestamp = new Timestamp(cal.getTime().getTime());
+	
+	    
+	    //graded date is +8 days of current date
+	    Timestamp grade_stamp = new Timestamp(System.currentTimeMillis());
+	    cal.setTimeInMillis(grade_stamp.getTime());
+	    cal.add(Calendar.DAY_OF_MONTH,8);
+	    grade_stamp = new Timestamp(cal.getTime().getTime());
+		
+		HashMap<String,Object> subdata=new HashMap<String, Object>();
+		subdata.put("assignmentId",PostRequestSteps.AssignId_env);
+		subdata.put("userId",PostRequestSteps.userId_env);
+		subdata.put("subDesc",data.get(1));
+		subdata.put("subComments",data.get(2));
+		subdata.put("subPathAttach1",data.get(3));
+		
+		subdata.put("subPathAttach2",data.get(4));
+		
+		subdata.put("subPathAttach3",data.get(5));
+		subdata.put("subPathAttach4",data.get(6));
+		subdata.put("subPathAttach5",data.get(7));
+		subdata.put("subDateTime",sdf.format(sub_datestamp));
+		subdata.put("gradedBy",PostRequestSteps.userId_env);
+		subdata.put("gradedDateTime",sdf.format(grade_stamp));
+		subdata.put("grade",data.get(8));
+		
+		System.out.println(subdata);
+		return subdata;
 	}
 	
 }

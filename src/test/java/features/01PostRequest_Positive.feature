@@ -54,4 +54,16 @@ Background: User sets Authorization
 | Assign_1 |   Assignment |
 #| Assign_2  |   Assignment|
 
+@SubmitAssignPost
+ Scenario Outline: check if user able to submit an assignment with valid endpoint and request body
+    Given user creates Submit Assign POST request for the LMS API endpoint from  "<testcaseName>" and "<Sheetname>"
+    When user call "SubmitAssgn" with "post" http request
+    Then User receives success code with response body
+    Then store the SubmissionID from json Response body
+    
+   Examples: 
+|testcaseName|Sheetname|
+| AssignSubmit_1 |   Assignmnet_Submit |
+#| AssignSubmit_2  |   Assignmnet_Submit|
+
 
