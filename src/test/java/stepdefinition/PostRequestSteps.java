@@ -26,8 +26,11 @@ public class PostRequestSteps extends Utils {
 	RequestSpecification req1;
 	Response response;
 	
-	public static String progID_env,Pname_env,bacthId_env,Bname_env,userId_env,CreateTime_env,AssignId_env,
-							duedate_env,createdBy_env;
+	public static String progID_env,Pname_env,
+						bacthId_env,Bname_env,
+						userId_env,CreateTime_env,username_env,phone_env
+						,AssignId_env,AssignName_env,duedate_env,createdBy_env,
+						submit_env,subdate_env,gradDate_env;
 	
 	TestData data=new TestData();
 	ExcelWriter xlwrite = new ExcelWriter("./src/test/resources/Response_data.xlsx");
@@ -147,15 +150,21 @@ public class PostRequestSteps extends Utils {
 	@Then("verify the userID in json Response body")
 	public void verify_the_user_id_in_json_response_body() throws IOException {
 		userId_env = getJsonPath(response, "userId");
+		username_env=getJsonPath(response, "userFirstName");
+		phone_env=getJsonPath(response, "userPhoneNumber");
 				
 		xlwrite.setcelldata("Response_User",0,0,"userID");
 		xlwrite.setcelldata("Response_User",0,1,userId_env);
+		xlwrite.setcelldata("Response_User",1,0,"userFirstName");
+		xlwrite.setcelldata("Response_User",1,1,username_env);
 		
+		xlwrite.setcelldata("Response_User",2,0,"userPhoneNumber");
+		xlwrite.setcelldata("Response_User",2,1,phone_env);
 		
 	}
 
-/*** Assignment Module POST Scenario 
- * @throws IOException ***/
+/*** Assignment Module POST Scenario  ***/
+	
 	@Given("user creates Assignment POST request for the LMS API endpoint from  {string} and {string}")
 	public void user_creates_assignment_post_request_for_the_lms_api_endpoint_from_and(String testcaseName, String Sheetname) throws IOException {
 		req1 = given().spec(requestSpecification()).body(data.AssignPayload(testcaseName,Sheetname));
@@ -177,6 +186,7 @@ public class PostRequestSteps extends Utils {
 		AssignId_env = getJsonPath(response, "assignmentId");
 		duedate_env = getJsonPath(response, "dueDate");
 		createdBy_env = getJsonPath(response, "createdBy");
+		AssignName_env = getJsonPath(response, "assignmentName");
 		
 		xlwrite.setcelldata("Response_Assign",0,0,"AssignmentID");
 		xlwrite.setcelldata("Response_Assign",0,1,AssignId_env);
@@ -187,7 +197,29 @@ public class PostRequestSteps extends Utils {
 	    
 	}
 
+/*** ASSIGNMENT SUBMIT POST SCENARIO STEPS  ***/
+	
+	@Given("user creates Submit Assign POST request for the LMS API endpoint from  {string} and {string}")
+	public void user_creates_submit_assign_post_request_for_the_lms_api_endpoint_from_and(String testcaseName, String Sheetname) throws IOException {
+		req1 = given().spec(requestSpecification()).body(data.AssignSubmitPayload(testcaseName,Sheetname));
+		res1=new ResponseSpecBuilder().expectStatusCode(201).build();
+	}
 
+	@Then("User receives success code with response body")
+	public void user_receives_success_code_with_response_body() {
+		response.then().assertThat().header("Content-Type","application/json")
+		.statusCode(201)
+		.assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath("AssignSubmitSchema.json"));
+	}
+
+	@Then("store the SubmissionID from json Response body")
+	public void store_the_submission_id_from_json_response_body() {
+		submit_env = getJsonPath(response, "submissionId");
+		subdate_env = getJsonPath(response, "subDateTime");
+		//gradDate_env = getJsonPath(response, "gradedDateTime");
+		
+		
+	}
 	
 	
 }

@@ -7,7 +7,8 @@ public enum API_enum {
 	GetallProgs("/allPrograms"),
 	GetByProgID("/programs/{{PostRequestSteps.progID_env}}"),
 	AddUsers("/users/users/roleStatus"),
-	AddAssignment("/assignments");
+	AddAssignment("/assignments"),
+	SubmitAssgn("/assignmentsubmission");
 	
 	private String resource;
 	API_enum(String resource)
