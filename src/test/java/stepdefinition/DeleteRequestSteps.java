@@ -55,7 +55,14 @@ public class DeleteRequestSteps extends Utils
 		{
 		response = req1.delete(resource_api.getresource()+ PostRequestSteps.Pname_env);
 		}
-		
+		else if (method.equalsIgnoreCase("deletesubmitid"))
+		{
+		response = req1.delete(resource_api.getresource()+ PostRequestSteps.submit_env);
+		}
+		else if (method.equalsIgnoreCase("deleteassignid"))
+		{
+		response = req1.delete(resource_api.getresource()+ PostRequestSteps.AssignId_env);
+		}
 	}
 
 	@Then("User receives 200Ok status with message")
