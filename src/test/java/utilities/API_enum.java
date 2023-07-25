@@ -7,8 +7,12 @@ public enum API_enum {
 	GetallProgs("/allPrograms"),
 	GetByProgID("/programs/{{PostRequestSteps.progID_env}}"),
 	AddUsers("/users/users/roleStatus"),
-	AddAssignment("/assignments");
-	
+	AddAssignment("/assignments"),
+	DeleteProgramID("/deletebyprogid/"),
+	DeleteProgramName("/deletebyprogname/"),
+	DeleteBatchID("/batches/"),
+	DeleteUserID("/users/users/"),
+	DeleteassignID("/assignments/");
 	private String resource;
 	API_enum(String resource)
 	{
