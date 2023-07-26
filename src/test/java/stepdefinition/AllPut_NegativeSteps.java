@@ -75,23 +75,6 @@ public class AllPut_NegativeSteps extends Utils {
 
 	
 
-	@Given("user creates put request on user to assign user to program batch with InvalidID  {string} and {string}")
-	public void user_creates_put_request_on_user_to_assign_user_to_program_batch_with_invalid_id_and(String string, String string2) throws IOException {
-		HashMap<String,Object> parent=new HashMap<String,Object>();
-		
-		HashMap<String,Object> map=new HashMap<String,Object>();
-		map.put("batchId","7259");
-		map.put("userRoleProgramBatchStatus","active");
-		
-		Object[] maparray=new Object[1];
-		maparray[0]=map;
-		
-		parent.put("programId",10689);
-		parent.put("roleId","7980");
-		parent.put("userId",PostRequestSteps.userId_env);
-		parent.put("userRoleProgramBatches",maparray);
-		req1 = given().spec(requestSpecification()).body(parent);
-	}
 	
 	
 	
@@ -102,9 +85,8 @@ public class AllPut_NegativeSteps extends Utils {
 		if (method.equalsIgnoreCase("PutUser"))
 		response = req1.put(resource_api.getresource()+PostRequestSteps.userId_env);
 		else if (method.equalsIgnoreCase("PutforUserrolestatus"))
-			response = req1.put(resource_api.getresource()+"U7876");
-		else if (method.equalsIgnoreCase("PutUserprogbatch"))
-			response = req1.put(resource_api.getresource()+"U8618");
+			response = req1.put(resource_api.getresource()+"U861");
+		
 		else if (method.equalsIgnoreCase("PutProgram"))
 			response = req1.put(resource_api.getresource()+PostRequestSteps.progID_env);
 		else if (method.equalsIgnoreCase("PutProgramname"))
@@ -113,8 +95,29 @@ public class AllPut_NegativeSteps extends Utils {
 			response = req1.put(resource_api.getresource()+PostRequestSteps.bacthId_env);
 		else if (method.equalsIgnoreCase("putAssign"))
 			response = req1.put(resource_api.getresource()+PostRequestSteps.AssignId_env);
+		else if (method.equalsIgnoreCase("putAssignsubmit"))
+			response = req1.put(resource_api.getresource()+PostRequestSteps.submitID_env);
 	}
 
+	
+	//UPDATE ASSIGNMENT WITH INVALID ID
+	@Given("user creates put request on Assignment with Invalid Id  {string} and {string}")
+	public void user_creates_put_request_on_assignment_with_invalid_id_and(String testcaseName, String Sheetname) throws IOException {
+		req1 = given().spec(requestSpecification()).body(data.assignPut(testcaseName,Sheetname));
+	}
+
+	// UPDATE ON ASSIGNMENT SUBMIT INVALID ID
+	
+	@Given("user creates put request on Invalid submitid {string} and {string}")
+	public void user_creates_put_request_on_invalid_submitid_and(String testcaseName, String Sheetname) throws IOException {
+		req1 = given().spec(requestSpecification()).body(data.assignsubmitPut(testcaseName,Sheetname));
+	}
+
+	@Given("user creates put request on grades Invalid submitid {string} and {string}")
+	public void user_creates_put_request_on_grades_invalid_submitid_and(String testcaseName, String Sheetname) throws IOException {
+		req1 = given().spec(requestSpecification()).body(data.assignsubmitPut(testcaseName,Sheetname));
+	}
+	
 	@Then("User receives 404NotFound status code with message and boolean success details")
 	public void user_receives_404NotFound_status_code_with_message_and_boolean_success_details() {
 		response.then().assertThat().header("Content-Type","application/json")
