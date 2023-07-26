@@ -1,4 +1,4 @@
-Feature: Program Post Negative Scenarios
+Feature: All Post Negative Scenarios
 
   Background: User sets Authorization
     Given User sets authorization to NO Auth

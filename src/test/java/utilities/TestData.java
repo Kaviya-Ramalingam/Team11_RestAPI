@@ -16,12 +16,12 @@ import stepdefinition.PostRequestSteps;
 
 public class TestData {
 	
-
+	ExcelUtility e1=new ExcelUtility("./src/test/resources/Team11_TestData.xlsx");
 	public  HashMap<String,Object> programPayload(String testcasename,String sheetname) throws IOException
 	{
 		
 		
-		List<String> data=ExcelUtility.getData(testcasename,sheetname);
+		List<String> data=e1.getData(testcasename,sheetname);
 		Random randomNum = new Random();
 		String prog_name="Jul23-GoogleSurvivors-SDET-"+randomNum.nextInt();
 		
@@ -41,7 +41,7 @@ public class TestData {
 	{
 		
 		
-		List<String> data=ExcelUtility.getData(testcasename,sheetname);
+		List<String> data=e1.getData(testcasename,sheetname);
 		Random randomNum = new Random();
 		String batch_name="Jul23-GoogleSurvivors-SDET-SDET01-"+randomNum.nextInt();
 		
@@ -63,7 +63,7 @@ public class TestData {
 	{
 		
 		
-		List<String> data=ExcelUtility.getData(testcasename,sheetname);
+		List<String> data=e1.getData(testcasename,sheetname);
 		Random randomNum = new Random();
 		String User_name="GoogleSurvivors-"+randomNum.nextInt(10);
 		
@@ -106,7 +106,7 @@ public class TestData {
 	public  HashMap<String, Object> AssignPayload(String testcasename,String sheetname) throws IOException
 	{
 		
-		List<String> data=ExcelUtility.getData(testcasename,sheetname);
+		List<String> data=e1.getData(testcasename,sheetname);
 		Random randomNum = new Random();
 		String Ass_name="Jul23-GoogleSurvivors-SDET-RestAPI-"+randomNum.nextInt();
 		
@@ -143,7 +143,7 @@ public class TestData {
 	public  HashMap<String, Object> AssignSubmitPayload(String testcasename,String sheetname) throws IOException
 	{
 		
-		List<String> data=ExcelUtility.getData(testcasename,sheetname);
+		List<String> data=e1.getData(testcasename,sheetname);
 		
 		
 		final SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");

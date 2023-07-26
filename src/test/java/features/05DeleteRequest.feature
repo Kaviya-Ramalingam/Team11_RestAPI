@@ -1,7 +1,6 @@
 
 @positiveDelete
-Feature: Title of your feature
-  I want to use this template for my feature file
+Feature: Delete request on All Modules positive scenarios
 
  Background: User sets Authorization
 			Given User sets authorization to NO Auth
@@ -15,13 +14,13 @@ Feature: Title of your feature
  
  
   @Assignmentdelbyid
-  	Scenario: Check if user able to delete a batch with valid batch ID
+  	Scenario: Check if user able to delete a batch with valid assignment ID
     Given User creates DELETE Request for the LMS API endpoint
     When User calls "DeleteassignID" with "deleteassignid" HTTPS Request
     Then User receives 200Ok status with message
     
     @userdelbyid
-  Scenario: Check if user able to delete a batch with valid batch ID
+  Scenario: Check if user able to delete a batch with valid user ID
     Given User creates DELETE Request for the LMS API endpoint
     When User calls "DeleteUserID" with "deleteuserid" HTTPS Request
     Then User receives 200Ok status with message
@@ -54,7 +53,7 @@ Feature: Title of your feature
    
 
   @progdelbyname
-  Scenario: Check if user able to delete a program with valid program ID
+  Scenario: Check if user able to delete a program with valid program name
     Given User creates DELETE Request for the LMS API endpoint
     When User calls "DeleteProgramName" with "deletename" HTTPS Request
     Then User receives 200Ok status with message
