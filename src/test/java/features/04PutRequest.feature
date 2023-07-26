@@ -23,7 +23,7 @@ Feature: Title of your feature
   
 
   #@updatebyuserrolestatus
-  #Scenario Outline: Check if user able to update a user with valid User Id and request body
+  #Scenario Outline: Check if user able to update a user role status with valid User Id and request body
     #Given user creates put request on user for changing role status  "<testcaseName>" and "<Sheetname>"
     #When user call "updateuserrolestatus" with "PutforUserrolestatus" http request to update
     #Then Request should be successful with status code 200user Role status Update
