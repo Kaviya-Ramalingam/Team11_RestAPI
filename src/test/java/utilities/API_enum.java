@@ -37,9 +37,9 @@ public enum API_enum {
 	updateprogram("/putprogram/"),
 	updateprogramname("/program/"),
 	updatebatchbyid("/batches/"),
-	updateAssign("/assignments/");
-	
-	
+	updateAssign("/assignments/"),
+	updateAssignsubmit("/assignmentsubmission/"),
+	putgradeAssignment("/assignmentsubmission/gradesubmission/"); 
      
 
 	private String resource;

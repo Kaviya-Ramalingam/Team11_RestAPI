@@ -13,7 +13,7 @@ Feature: Put  Negative Scenarios
 
     Examples: 
       | testcaseName | Sheetname |
-      | Progput_1    | Response_Program |
+      | Progput_10   | Response_Program |
       
      
     
@@ -34,7 +34,7 @@ Feature: Put  Negative Scenarios
 
       Examples: 
 |testcaseName|Sheetname|
-| batchupdate1 | Response_Batch |
+| batchupdate10 | Response_Batch |
       
       
     
@@ -46,11 +46,10 @@ Feature: Put  Negative Scenarios
 
     Examples: 
       | testcaseName | Sheetname     |
-      | Userupdate1  | Response_User |
+      | Userupdate10 | Response_User |
       
+    
      
-      
-        
       
       
       @update_rolestatus_invalidID
@@ -61,27 +60,41 @@ Feature: Put  Negative Scenarios
 
     Examples: 
       | testcaseName | Sheetname     |
-      | Userupdate1  | Response_User |
+      | Userupdate10  | Response_User |
       
-      
-      @update_rolestatus_missing
-      Scenario Outline: Check if user able to update a user role status with missing data
-    Given user creates put request on user for changing role status with missing data 
-    When user call "updateuserrolestatus" with "PutforUserrolestatus" http request for Put
-    Then User receives 400BadRequest status code with message and boolean success details
     
-    
-    
-    @assignUSer_invalidUserID
-    Scenario Outline: Check if user able to assign user to program batch with invalid ID
-    Given user creates put request on user to assign user to program batch with InvalidID  "<testcaseName>" and "<Sheetname>"
-    When user call "updateuserrolestatus" with "PutforUserrolestatus" http request for Put
+      @putAssign_invalidID
+ 
+  Scenario Outline: Check if user able to update a Assignment with invalid AssignmentId and request body
+    Given user creates put request on Assignment with Invalid Id  "<testcaseName>" and "<Sheetname>"
+    When user call "updateAssign" with "putAssign" http request for Put
     Then User receives 404NotFound status code with message and boolean success details
 
     Examples: 
       | testcaseName | Sheetname     |
-      | Userupdate1  | Response_User |
+      | assignupdate10 | Response_Assign |
     
+  @putResubmit_invalidID
+     Scenario Outline: Check if user able to update a submission with invalid submission Id and request body
+    Given user creates put request on Invalid submitid "<testcaseName>" and "<Sheetname>"
+    When user call "updateAssignsubmit" with "putAssignsubmit" http request for Put
+    Then User receives 404NotFound status code with message and boolean success details
+
+    Examples: 
+      | testcaseName   | Sheetname         |
+      | AssignSubmit_1 | Assignmnet_Submit |
+      
+      
+    @putgradeAssignSubmit_invalidID
+     Scenario Outline: Check if user able to update a grades with invalid submission Id and request body
+    Given user creates put request on grades Invalid submitid "<testcaseName>" and "<Sheetname>"
+    When user call "putgradeAssignment" with "putAssignsubmit" http request for Put
+    Then User receives 404NotFound status code with message and boolean success details
+
+    Examples: 
+      | testcaseName   | Sheetname         |
+      | AssignSubmit_1 | Assignmnet_Submit |
+      
    
     
     

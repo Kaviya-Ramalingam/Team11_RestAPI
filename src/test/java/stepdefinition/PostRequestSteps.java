@@ -24,12 +24,14 @@ public class PostRequestSteps extends Utils {
 	RequestSpecification req1;
 	Response response;
 	
-	public static String progname_env,progdes_env,progstatus_env,CreateTime_env,
-	bacthId_env,bname_env,bdes_env,bclasses_env,bstatus_env,bpid_env,bpname_env,userId_env,AssignId_env,
-							duedate_env,createdBy_env,assigndes_env,assignname_env;
-	public static String progID_env,bid,gid;
-	public static String userfirsname_env,userlastname_env,usermiddlename_env,phone,location,timezone,linkein,ug,pg,comment,visastatus;
-	public static String submitID_env,subdate_env;
+	public static String progname_env,progdes_env,progstatus_env,CreateTime_env,bacthId_env,bname_env,
+	bdes_env,bclasses_env,bstatus_env,bpid_env,bpname_env,userId_env,AssignId_env,duedate_env,createdBy_env,
+	assigndes_env,assignname_env,subdes_env, progID_env,bid,gid,urolestudent,userfirsname_env,
+	userlastname_env,usermiddlename_env,phone,location,timezone,linkein,ug,pg,comment,visastatus,
+	submitID_env,subdate_env,subpath1_env,subpath2_env,subpath3_env,subpath4_env,subcom_env,
+	subpath5_env,gradeby_env,gradDate_env,grade_env;
+	int i=0;
+	
 	TestData data=new TestData();
 	ExcelWriter xlwrite = new ExcelWriter("./src/test/resources/Response_data.xlsx");
 	
@@ -95,20 +97,23 @@ public class PostRequestSteps extends Utils {
 		xlwrite.setcelldata("Response_Program",0,3,"programDescription");
 		xlwrite.setcelldata("Response_Program",0,4,"programStatus");
 		//xlwrite.setcelldata("Response_Program",0,5,"creationTime");
+	
 		
-		xlwrite.setcelldata("Response_Program",1,0,"Progput_1");
-		xlwrite.setcelldata("Response_Program",1,1,progID_env);
-		xlwrite.setcelldata("Response_Program",1,2,progname_env);
-		xlwrite.setcelldata("Response_Program",1,3,progdes_env);
-		xlwrite.setcelldata("Response_Program",1,4,progstatus_env);
+		xlwrite.setcelldata("Response_Program",1+i,0,"Progput_1"+i);
+		xlwrite.setcelldata("Response_Program",1+i,1,progID_env);
+		xlwrite.setcelldata("Response_Program",1+i,2,progname_env);
+		xlwrite.setcelldata("Response_Program",1+i,3,progdes_env);
+		xlwrite.setcelldata("Response_Program",1+i,4,progstatus_env);
 		//xlwrite.setcelldata("Response_Program",1,5,CreateTime_env);
-	   
+		i++;
 	}
 	
 	/*** Batch Scenario steps ***/
 	
 	@Given("user creates Batch POST request for the LMS API endpoint from  {string} and {string}")
 	public void user_creates_batch_post_request_for_the_lms_api_endpoint_from_and(String testcaseName, String Sheetname) throws IOException {
+		
+		
 		req1 = given().spec(requestSpecification()).body(data.BatchPayload(testcaseName,Sheetname));
 		res1=new ResponseSpecBuilder().expectStatusCode(201).build();
 	    
@@ -126,6 +131,7 @@ public class PostRequestSteps extends Utils {
 	}
 	@Then("verify the batchId in json Response body")
 	public void verify_the_batch_id_in_json_response_body() throws IOException {
+		
 		bdes_env=getJsonPath(response, "batchDescription");
 		bacthId_env = getJsonPath(response, "batchId");
 		bname_env=getJsonPath(response, "batchName");
@@ -144,16 +150,18 @@ public class PostRequestSteps extends Utils {
 		xlwrite.setcelldata("Response_Batch",0,6,"programId");
 		xlwrite.setcelldata("Response_Batch",0,7,"programName");
 		
-		xlwrite.setcelldata("Response_Batch",1,0,"batchupdate1");
-		xlwrite.setcelldata("Response_Batch",1,1,bdes_env);
-		xlwrite.setcelldata("Response_Batch",1,2,bacthId_env);
-		xlwrite.setcelldata("Response_Batch",1,3,bname_env);
-		xlwrite.setcelldata("Response_Batch",1,4,bclasses_env);
-		xlwrite.setcelldata("Response_Batch",1,5,bstatus_env);
-		xlwrite.setcelldata("Response_Batch",1,6,bpid_env);
-		xlwrite.setcelldata("Response_Batch",1,7,bpname_env);
 		
 		
+		xlwrite.setcelldata("Response_Batch",1+i,0,"batchupdate1"+i);
+		xlwrite.setcelldata("Response_Batch",1+i,1,bdes_env);
+		xlwrite.setcelldata("Response_Batch",1+i,2,bacthId_env);
+		xlwrite.setcelldata("Response_Batch",1+i,3,bname_env);
+		xlwrite.setcelldata("Response_Batch",1+i,4,bclasses_env);
+		xlwrite.setcelldata("Response_Batch",1+i,5,bstatus_env);
+		xlwrite.setcelldata("Response_Batch",1+i,6,bpid_env);
+		xlwrite.setcelldata("Response_Batch",1+i,7,bpname_env);
+		
+		i++;
 	}
 
 
@@ -175,6 +183,7 @@ public class PostRequestSteps extends Utils {
 	}
 	@Then("verify the userID in json Response body")
 	public void verify_the_user_id_in_json_response_body() throws IOException {
+		
 		userId_env = getJsonPath(response, "userId");
 		userfirsname_env = getJsonPath(response, "userFirstName");
 		userlastname_env = getJsonPath(response, "userLastName");
@@ -203,19 +212,23 @@ public class PostRequestSteps extends Utils {
 		xlwrite.setcelldata("Response_User",0,11,"userComments");
 		xlwrite.setcelldata("Response_User",0,12,"userVisaStatus");
 		
-		xlwrite.setcelldata("Response_User",1,0,"Userupdate1");
-		xlwrite.setcelldata("Response_User",1,1,userId_env);
-		xlwrite.setcelldata("Response_User",1,2,userfirsname_env);
-		xlwrite.setcelldata("Response_User",1,3,userlastname_env );
-		xlwrite.setcelldata("Response_User",1,4,usermiddlename_env );
-		xlwrite.setcelldata("Response_User",1,5,phone);
-		xlwrite.setcelldata("Response_User",1,6,location);
-		xlwrite.setcelldata("Response_User",1,7,timezone);
-		xlwrite.setcelldata("Response_User",1,8,linkein);
-		xlwrite.setcelldata("Response_User",1,9,ug);
-		xlwrite.setcelldata("Response_User",1,10,pg);
-		xlwrite.setcelldata("Response_User",1,11,comment);
-		xlwrite.setcelldata("Response_User",1,12,visastatus);
+		int a=0;
+		xlwrite.setcelldata("Response_User",a+1,0,"Userupdate1"+a);
+		xlwrite.setcelldata("Response_User",a+1,1,userId_env);
+		xlwrite.setcelldata("Response_User",a+1,2,userfirsname_env);
+		xlwrite.setcelldata("Response_User",a+1,3,userlastname_env );
+		xlwrite.setcelldata("Response_User",a+1,4,usermiddlename_env );
+		xlwrite.setcelldata("Response_User",a+1,5,phone);
+		xlwrite.setcelldata("Response_User",a+1,6,location);
+		xlwrite.setcelldata("Response_User",a+1,7,timezone);
+		xlwrite.setcelldata("Response_User",a+1,8,linkein);
+		xlwrite.setcelldata("Response_User",a+1,9,ug);
+		xlwrite.setcelldata("Response_User",a+1,10,pg);
+		xlwrite.setcelldata("Response_User",a+1,11,comment);
+		xlwrite.setcelldata("Response_User",a+1,12,visastatus);
+		
+		
+		a++;
 		
 		
 		
@@ -241,6 +254,7 @@ public class PostRequestSteps extends Utils {
 
 	@Then("store the AssignID from json Response body")
 	public void store_the_assign_id_from_json_response_body() throws IOException {
+		
 		AssignId_env = getJsonPath(response, "assignmentId");
 		duedate_env = getJsonPath(response, "dueDate");
 		createdBy_env = getJsonPath(response, "createdBy");
@@ -249,28 +263,26 @@ public class PostRequestSteps extends Utils {
 		bid = getJsonPath(response, "batchId");
 		 gid= getJsonPath(response, "graderId");
 		
+		 
 		xlwrite.setcelldata("Response_Assign",0,0,"testcaseName");
 		xlwrite.setcelldata("Response_Assign",0,1,"assignmentDescription");
-		xlwrite.setcelldata("Response_Assign",0,2,"AssignmentID");
+		xlwrite.setcelldata("Response_Assign",0,2,"assignmentId");
 		xlwrite.setcelldata("Response_Assign",0,3,"assignmentName");
 		xlwrite.setcelldata("Response_Assign",0,4,"batchId");
 		xlwrite.setcelldata("Response_Assign",0,5,"createdBy");
 		xlwrite.setcelldata("Response_Assign",0,6,"dueDate");
 		xlwrite.setcelldata("Response_Assign",0,7,"graderId");
-		
-		
-		xlwrite.setcelldata("Response_Assign",1,0,"assignupdate1");
-		xlwrite.setcelldata("Response_Assign",1,1,assigndes_env);
-		xlwrite.setcelldata("Response_Assign",1,2,AssignId_env);
-		xlwrite.setcelldata("Response_Assign",1,3,assignname_env);
-		xlwrite.setcelldata("Response_Assign",1,4,bid);
-		xlwrite.setcelldata("Response_Assign",1,5,createdBy_env);
-		xlwrite.setcelldata("Response_Assign",1,6,duedate_env);
-		xlwrite.setcelldata("Response_Assign",1,7,gid);
-	    
+		int i=0;
+		xlwrite.setcelldata("Response_Assign",i+1,0,"assignupdate1"+i);
+		xlwrite.setcelldata("Response_Assign",i+1,1,assigndes_env);
+		xlwrite.setcelldata("Response_Assign",i+1,2,AssignId_env);
+		xlwrite.setcelldata("Response_Assign",i+1,3,assignname_env);
+		xlwrite.setcelldata("Response_Assign",i+1,4,bid);
+		xlwrite.setcelldata("Response_Assign",i+1,5,createdBy_env);
+		xlwrite.setcelldata("Response_Assign",i+1,6,duedate_env);
+		xlwrite.setcelldata("Response_Assign",i+1,7,gid);
+		i++;
 	}
-
-/*** ASSIGNMENT SUBMIT POST SCENARIO STEPS  ***/
 	
 	@Given("user creates Submit Assign POST request for the LMS API endpoint from  {string} and {string}")
 	public void user_creates_submit_assign_post_request_for_the_lms_api_endpoint_from_and(String testcaseName, String Sheetname) throws IOException {
@@ -286,9 +298,13 @@ public class PostRequestSteps extends Utils {
 	}
 
 	@Then("store the SubmissionID from json Response body")
-	public void store_the_submission_id_from_json_response_body() {
+	public void store_the_submission_id_from_json_response_body() throws IOException
+	{
 		submitID_env = getJsonPath(response, "submissionId");
+		
 		subdate_env = getJsonPath(response, "subDateTime");
+		subdes_env = getJsonPath(response, "subDesc");
+		subcom_env = getJsonPath(response, "subComments");
 		//gradDate_env = getJsonPath(response, "gradedDateTime");
 		
 		
