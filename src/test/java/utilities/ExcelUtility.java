@@ -13,13 +13,17 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class ExcelUtility {
+	FileInputStream fis;
 	
-	public static ArrayList<String> getData(String testcaseName,String sheetName) throws IOException
+	public String path;
+	 public ExcelUtility(String path) { this.path = path; } 
+	
+	public ArrayList<String> getData(String testcaseName,String sheetName) throws IOException
 	{
 		//fileInputStream argument
 				ArrayList<String> a=new ArrayList<String>();
-				
-				FileInputStream fis=new FileInputStream("./src/test/resources/Team11_TestData.xlsx");
+			fis=new FileInputStream(path);
+				//FileInputStream fis=new FileInputStream("./src/test/resources/Team11_TestData.xlsx");
 				XSSFWorkbook workbook=new XSSFWorkbook(fis);
 				
 				int sheets=workbook.getNumberOfSheets();

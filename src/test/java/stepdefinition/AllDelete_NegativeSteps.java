@@ -8,39 +8,28 @@ import java.io.IOException;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import io.restassured.builder.RequestSpecBuilder;
-import io.restassured.builder.ResponseSpecBuilder;
-import io.restassured.http.ContentType;
-import io.restassured.module.jsv.JsonSchemaValidator;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
 import utilities.API_enum;
-import utilities.ExcelWriter;
-import utilities.TestData;
 import utilities.Utils;
 
+public class AllDelete_NegativeSteps extends Utils {
 
-public class DeleteRequestSteps extends Utils
-{
 	RequestSpecification req1;
 	Response response;
 	
-	
-	@Given("User creates DELETE Request for the LMS API endpoint")
-	public void user_creates_delete_request_for_the_lms_api_endpoint() throws IOException {
+	@Given("User creates DELETE Request with invalid inputs for the LMS API endpoint")
+	public void user_creates_delete_request_with_invalid_inputs_for_the_lms_api_endpoint() throws IOException {
 		req1 = given().spec(requestSpecification());
 	}
 
-
-
-	@When("User calls {string} with {string} HTTPS Request")
-	public void user_calls_with_https_request(String resource, String method) 
-	{
+	@When("User calls {string} with {string} HTTPS Request for delete")
+	public void user_calls_with_https_request_for_delete(String resource, String method) {
 		API_enum resource_api = API_enum.valueOf(resource);
 		if (method.equalsIgnoreCase("deletebatchid"))
 		{
-		response = req1.delete(resource_api.getresource()+ PostRequestSteps.bacthId_env);
+		response = req1.delete(resource_api.getresource()+PostRequestSteps.bacthId_env);
 		}
 		else if (method.equalsIgnoreCase("deleteprogramid"))
 		{
@@ -64,14 +53,10 @@ public class DeleteRequestSteps extends Utils
 		}
 	}
 
-	@Then("User receives 200Ok status with message")
-	public void user_receives_200ok_status_with_message() 
-	{
-		response.then()
-		.statusCode(200).log().all();
+	@Then("User receives 404NotFound status with message")
+	public void user_receives_404not_found_status_with_message() {
+		response.then().assertThat().header("Content-Type","application/json")
+		.statusCode(404).log().all();
 	}
-	
-	
-
 
 }
