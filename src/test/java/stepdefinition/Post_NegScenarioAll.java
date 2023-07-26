@@ -22,15 +22,15 @@ public class Post_NegScenarioAll extends Utils {
 	ResponseSpecification res1;
 	RequestSpecification req2;
 	Response response;
-	
+	ExcelUtility excelread=new ExcelUtility("./src/test/resources/Team11_TestData.xlsx");
 	HashMap<String,Object> map=new HashMap<String, Object>();
 	/**** PROGRAM MODULE POST NEGATIVE SCENARIOS ***/
 	@Given("user creates POST request with existing prog name for the LMS API endpoint from  {string} and {string}")
 	public void user_creates_post_request_with_existing_prog_name_for_the_lms_api_endpoint_from_and(String testcaseName, String Sheetname) throws IOException {
-		List<String> data=ExcelUtility.getData(testcaseName,Sheetname);
+		List<String> data=excelread.getData(testcaseName,Sheetname);
 		
 		
-		map.put("programName",PostRequestSteps.Pname_env);
+		map.put("programName",PostRequestSteps.progname_env);
 		map.put("programDescription",data.get(1));
 		map.put("programStatus",data.get(2));
 		
@@ -41,7 +41,7 @@ public class Post_NegScenarioAll extends Utils {
 	
 	@Given("user creates POST request with missingfield for the LMS API endpoint from  {string} and {string}")
 	public void user_creates_post_request_with_missingfield_for_the_lms_api_endpoint_from_and(String testcaseName, String Sheetname) throws IOException {
-		List<String> data=ExcelUtility.getData(testcaseName,Sheetname);
+		List<String> data=excelread.getData(testcaseName,Sheetname);
 		
 		
 		map.put("programName","");
@@ -57,10 +57,10 @@ public class Post_NegScenarioAll extends Utils {
 	@Given("user creates POST request with existing batch name for the LMS API endpoint from  {string} and {string}")
 	public void user_creates_post_request_with_existing_batch_name_for_the_lms_api_endpoint_from_and(String testcaseName, String Sheetname) throws IOException {
 		
-		List<String> data=ExcelUtility.getData(testcaseName,Sheetname);
+		List<String> data=excelread.getData(testcaseName,Sheetname);
 		
 		//with same batch name
-		map.put("batchName",PostRequestSteps.Bname_env);
+		map.put("batchName",PostRequestSteps.bname_env);
 		map.put("batchDescription",data.get(1));
 		map.put("batchStatus",data.get(2));
 		map.put("batchNoOfClasses",data.get(3));
@@ -73,10 +73,10 @@ public class Post_NegScenarioAll extends Utils {
 	@Given("user creates POST request with missingfield in batch for the LMS API endpoint from  {string} and {string}")
 	public void user_creates_post_request_with_missingfield_in_batch_for_the_lms_api_endpoint_from_and(String testcaseName, String Sheetname) throws IOException {
 		
-		List<String> data=ExcelUtility.getData(testcaseName,Sheetname);
+		List<String> data=excelread.getData(testcaseName,Sheetname);
 		
 		
-		map.put("batchName",PostRequestSteps.Bname_env);
+		map.put("batchName",PostRequestSteps.bname_env);
 		map.put("batchDescription",data.get(1));
 		map.put("batchStatus",data.get(2));
 		map.put("batchNoOfClasses",data.get(3));
@@ -92,7 +92,7 @@ public class Post_NegScenarioAll extends Utils {
 	@Given("user creates user with existing phone number for the LMS API endpoint from  {string} and {string}")
 	public void user_creates_user_with_existing_phone_number_for_the_lms_api_endpoint_from_and(String testcaseName, String Sheetname) throws IOException {
 	   
-		List<String> data=ExcelUtility.getData(testcaseName,Sheetname);
+		List<String> data=excelread.getData(testcaseName,Sheetname);
 		HashMap<String,Object> userdata=new HashMap<String,Object>();
 		
 		HashMap<String,Object> map=new HashMap<String,Object>();
@@ -105,13 +105,13 @@ public class Post_NegScenarioAll extends Utils {
 		userdata.put("userComments",data.get(1));
 		userdata.put("userEduPg",data.get(2));
 		userdata.put("userEduUg",data.get(3));
-		userdata.put("userFirstName",PostRequestSteps.username_env);
+		userdata.put("userFirstName",PostRequestSteps.userfirsname_env);
 		
 		userdata.put("userLastName",data.get(4));
 		userdata.put("userLinkedinUrl",data.get(5));
 		userdata.put("userLocation",data.get(6));
 		userdata.put("userMiddleName",data.get(8));
-		userdata.put("userPhoneNumber",PostRequestSteps.phone_env);
+		userdata.put("userPhoneNumber",PostRequestSteps.phone);
 					
 		userdata.put("userRoleMaps",maparray);
 		
@@ -145,7 +145,7 @@ public class Post_NegScenarioAll extends Utils {
 	
 	@Given("user creates user with a missing field for the LMS API endpoint from  {string} and {string}")
 	public void user_creates_user_with_a_missing_field_for_the_lms_api_endpoint_from_and(String testcaseName, String Sheetname) throws IOException {
-		List<String> data=ExcelUtility.getData(testcaseName,Sheetname);
+		List<String> data=excelread.getData(testcaseName,Sheetname);
 		HashMap<String,Object> userdata=new HashMap<String,Object>();
 		
 		HashMap<String,Object> map=new HashMap<String,Object>();
@@ -167,10 +167,10 @@ public class Post_NegScenarioAll extends Utils {
 	
 	@Given("user creates Assignment with existing value for the LMS API endpoint from  {string} and {string}")
 	public void user_creates_Assignment_with_existing_value_for_the_lms_api_endpoint_from_and(String testcasename, String sheetname) throws IOException {
-		List<String> data=ExcelUtility.getData(testcasename,sheetname);
+		List<String> data=excelread.getData(testcasename,sheetname);
 		HashMap<String,Object> assdata=new HashMap<String, Object>();
 		assdata.put("assignmentDescription",data.get(1));
-		assdata.put("assignmentName",PostRequestSteps.AssignName_env);
+		assdata.put("assignmentName",PostRequestSteps.assignname_env);
 		assdata.put("batchId",PostRequestSteps.bacthId_env);
 		assdata.put("comments",data.get(7));
 		
@@ -190,10 +190,10 @@ public class Post_NegScenarioAll extends Utils {
 	@Given("user creates Assignment with missing value for the LMS API endpoint from  {string} and {string}")
 	public void user_creates_Assignment_with_missing_value_for_the_lms_api_endpoint_from_and(String testcasename, String sheetname) throws IOException {
 	    
-		List<String> data=ExcelUtility.getData(testcasename,sheetname);
+		List<String> data=excelread.getData(testcasename,sheetname);
 		HashMap<String,Object> assdata=new HashMap<String, Object>();
 		assdata.put("assignmentDescription",data.get(1));
-		assdata.put("assignmentName",PostRequestSteps.AssignName_env);
+		assdata.put("assignmentName",PostRequestSteps.assignname_env);
 		assdata.put("batchId",PostRequestSteps.bacthId_env);
 		assdata.put("comments",data.get(7));
 		req2=given().spec(requestSpecification()).body(assdata);
@@ -204,7 +204,7 @@ public class Post_NegScenarioAll extends Utils {
 	
 	@Given("user submits assignment with existing value for the LMS API endpoint from  {string} and {string}")
 	public void user_submits_assignment_with_existing_value_for_the_lms_api_endpoint_from_and(String testcasename, String sheetname) throws IOException {
-		List<String> data=ExcelUtility.getData(testcasename,sheetname);
+		List<String> data=excelread.getData(testcasename,sheetname);
 		HashMap<String,Object> subdata=new HashMap<String, Object>();
 		subdata.put("assignmentId",PostRequestSteps.AssignId_env);
 		subdata.put("userId",PostRequestSteps.userId_env);
@@ -228,7 +228,7 @@ public class Post_NegScenarioAll extends Utils {
 
 	@Given("user submits assignment with missing value for the LMS API endpoint from  {string} and {string}")
 	public void user_submits_assignment_with_missing_value_for_the_lms_api_endpoint_from_and(String testcasename, String sheetname) throws IOException {
-		List<String> data=ExcelUtility.getData(testcasename,sheetname);
+		List<String> data=excelread.getData(testcasename,sheetname);
 		HashMap<String,Object> subdata=new HashMap<String, Object>();
 		subdata.put("assignmentId","");
 		subdata.put("userId",PostRequestSteps.userId_env);
