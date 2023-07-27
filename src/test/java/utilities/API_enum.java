@@ -8,6 +8,8 @@ public enum API_enum {
 	GetByProgID("/programs/"),
 	GetAllBatches("/batches"),
 	GetBAtchID("/batches/batchId/"),
+	GetbatchByProgID("/batches/program/"),
+	GetbatchName("/batches/batchName/"),
 	AddUsers("/users/users/roleStatus"),
 	AddAssignment("/assignments"),
 	SubmitAssgn("/assignmentsubmission"),

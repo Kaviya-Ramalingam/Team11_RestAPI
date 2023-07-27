@@ -15,7 +15,7 @@ Background: User sets Authorization
    Examples: 
 |testcaseName|Sheetname|
 | Prog_1  |   Program |
-#| Prog_2  |   Program|
+| Prog_2  |   Program|
 
 @batchpost
   Scenario Outline: check if user able to create a batch with valid endpoint and request body

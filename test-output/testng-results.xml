@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="56" passed="54" failed="2" skipped="0">
+<testng-results ignored="0" total="87" passed="83" failed="4" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-07-25T20:48:55 EDT" name="Default suite" finished-at="2023-07-25T20:49:30 EDT" duration-ms="35196">
+  <suite started-at="2023-07-26T21:50:12 EDT" name="Default suite" finished-at="2023-07-26T21:51:13 EDT" duration-ms="61062">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2023-07-25T20:48:55 EDT" name="Default test" finished-at="2023-07-25T20:49:30 EDT" duration-ms="35196">
+    <test started-at="2023-07-26T21:50:12 EDT" name="Default test" finished-at="2023-07-26T21:51:13 EDT" duration-ms="61062">
       <class name="testrunner.testRunner$TestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-25T20:48:55 EDT" name="setUpClass" finished-at="2023-07-25T20:48:56 EDT" duration-ms="884" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-26T21:50:12 EDT" name="setUpClass" finished-at="2023-07-26T21:50:14 EDT" duration-ms="1233" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@1add90e0]]>
+                <![CDATA[org.testng.TestRunner@4557723a]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-25T20:48:56 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-25T20:49:04 EDT" duration-ms="7806" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-26T21:50:14 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-26T21:50:22 EDT" duration-ms="8212" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -37,7 +37,23 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-25T20:49:04 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-25T20:49:06 EDT" duration-ms="2153" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-26T21:50:22 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-26T21:50:23 EDT" duration-ms="1517" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["check if user able to create a program with valid endpoint and request body"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["post request of all modules"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-26T21:50:23 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-26T21:50:25 EDT" duration-ms="1628" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -53,7 +69,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-25T20:49:06 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-25T20:49:08 EDT" duration-ms="2328" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-26T21:50:25 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-26T21:50:29 EDT" duration-ms="3801" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -69,7 +85,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-25T20:49:08 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-25T20:49:10 EDT" duration-ms="1314" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-26T21:50:29 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-26T21:50:30 EDT" duration-ms="1117" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -85,7 +101,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-25T20:49:10 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-25T20:49:10 EDT" duration-ms="396" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-26T21:50:30 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-26T21:50:30 EDT" duration-ms="407" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -101,7 +117,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-25T20:49:10 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-25T20:49:11 EDT" duration-ms="307" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-26T21:50:30 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-26T21:50:31 EDT" duration-ms="344" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -117,7 +133,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-25T20:49:11 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-25T20:49:11 EDT" duration-ms="374" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-26T21:50:31 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-26T21:50:31 EDT" duration-ms="322" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -133,7 +149,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-25T20:49:11 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-25T20:49:11 EDT" duration-ms="343" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-26T21:50:31 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-26T21:50:31 EDT" duration-ms="323" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -149,7 +165,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-25T20:49:11 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-25T20:49:12 EDT" duration-ms="318" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-26T21:50:31 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-26T21:50:32 EDT" duration-ms="299" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -165,7 +181,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-25T20:49:12 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-25T20:49:12 EDT" duration-ms="367" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-26T21:50:32 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-26T21:50:32 EDT" duration-ms="324" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -181,7 +197,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-25T20:49:12 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-25T20:49:13 EDT" duration-ms="1288" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-26T21:50:32 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-26T21:50:32 EDT" duration-ms="312" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -197,7 +213,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-25T20:49:13 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-25T20:49:14 EDT" duration-ms="379" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-26T21:50:32 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-26T21:50:33 EDT" duration-ms="296" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -213,7 +229,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-25T20:49:14 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-25T20:49:14 EDT" duration-ms="344" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-26T21:50:33 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-26T21:50:33 EDT" duration-ms="263" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -229,7 +245,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-25T20:49:14 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-25T20:49:14 EDT" duration-ms="353" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-26T21:50:33 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-26T21:50:33 EDT" duration-ms="307" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -245,7 +261,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-25T20:49:14 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-25T20:49:15 EDT" duration-ms="337" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-26T21:50:33 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-26T21:50:33 EDT" duration-ms="263" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -261,7 +277,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-25T20:49:15 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-25T20:49:15 EDT" duration-ms="767" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-26T21:50:33 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-26T21:50:34 EDT" duration-ms="844" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -277,7 +293,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-25T20:49:15 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-25T20:49:16 EDT" duration-ms="223" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-26T21:50:34 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-26T21:50:35 EDT" duration-ms="312" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -293,7 +309,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-25T20:49:16 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-25T20:49:17 EDT" duration-ms="898" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-26T21:50:35 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-26T21:50:36 EDT" duration-ms="981" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -309,7 +325,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-25T20:49:17 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-25T20:49:17 EDT" duration-ms="232" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-26T21:50:36 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-26T21:50:36 EDT" duration-ms="259" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -325,7 +341,39 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-25T20:49:17 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-25T20:49:17 EDT" duration-ms="279" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-26T21:50:36 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-26T21:50:36 EDT" duration-ms="277" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Check if user able to retrieve a batch by name"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Positive Scenarios of All modules Get requests"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-26T21:50:36 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-26T21:50:36 EDT" duration-ms="270" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Check if user able to retrieve a batch by program ID"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Positive Scenarios of All modules Get requests"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-26T21:50:36 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-26T21:50:37 EDT" duration-ms="229" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -341,7 +389,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-25T20:49:17 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-25T20:49:19 EDT" duration-ms="2130" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-26T21:50:37 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-26T21:50:40 EDT" duration-ms="3358" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -357,7 +405,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-25T20:49:19 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-25T20:49:20 EDT" duration-ms="504" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-26T21:50:40 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-26T21:50:40 EDT" duration-ms="404" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -402,15 +450,15 @@ at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecific
 at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
 at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
 at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
-at stepdefinition.AllGet_PositiveSteps.user_receives_status_code200_ok_with_message(AllGet_PositiveSteps.java:72)
-at ✽.User receives  status code200 ok with message(file:///Users/srihari/GitHub/Team11_RestAPI/src/test/java/features/03AllGetRequest_Positve.feature:50)
+at stepdefinition.AllGet_PositiveSteps.user_receives_status_code200_ok_with_message(AllGet_PositiveSteps.java:76)
+at ✽.User receives  status code200 ok with message(file:///Users/srihari/GitHub/Team11_RestAPI/src/test/java/features/03AllGetRequest_Positve.feature:62)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-25T20:49:20 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-25T20:49:20 EDT" duration-ms="671" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-26T21:50:40 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-26T21:50:41 EDT" duration-ms="745" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -426,7 +474,7 @@ at ✽.User receives  status code200 ok with message(file:///Users/srihari/GitHu
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-25T20:49:20 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-25T20:49:21 EDT" duration-ms="231" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-26T21:50:41 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-26T21:50:41 EDT" duration-ms="301" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -442,7 +490,7 @@ at ✽.User receives  status code200 ok with message(file:///Users/srihari/GitHu
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-25T20:49:21 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-25T20:49:21 EDT" duration-ms="371" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-26T21:50:41 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-26T21:50:42 EDT" duration-ms="273" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -458,7 +506,7 @@ at ✽.User receives  status code200 ok with message(file:///Users/srihari/GitHu
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-25T20:49:21 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-25T20:49:22 EDT" duration-ms="749" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-26T21:50:42 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-26T21:50:42 EDT" duration-ms="429" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -474,7 +522,7 @@ at ✽.User receives  status code200 ok with message(file:///Users/srihari/GitHu
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-25T20:49:22 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-25T20:49:22 EDT" duration-ms="610" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-26T21:50:42 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-26T21:50:42 EDT" duration-ms="322" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -490,7 +538,7 @@ at ✽.User receives  status code200 ok with message(file:///Users/srihari/GitHu
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-25T20:49:22 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-25T20:49:23 EDT" duration-ms="630" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-26T21:50:42 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-26T21:50:43 EDT" duration-ms="260" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -506,7 +554,7 @@ at ✽.User receives  status code200 ok with message(file:///Users/srihari/GitHu
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-25T20:49:23 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-25T20:49:24 EDT" duration-ms="631" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-26T21:50:43 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-26T21:50:43 EDT" duration-ms="242" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -522,7 +570,7 @@ at ✽.User receives  status code200 ok with message(file:///Users/srihari/GitHu
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-25T20:49:24 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-25T20:49:24 EDT" duration-ms="330" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-26T21:50:43 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-26T21:50:43 EDT" duration-ms="246" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -538,7 +586,7 @@ at ✽.User receives  status code200 ok with message(file:///Users/srihari/GitHu
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-25T20:49:24 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-25T20:49:24 EDT" duration-ms="252" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-26T21:50:43 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-26T21:50:43 EDT" duration-ms="278" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -554,7 +602,90 @@ at ✽.User receives  status code200 ok with message(file:///Users/srihari/GitHu
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-25T20:49:24 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-25T20:49:24 EDT" duration-ms="278" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-26T21:50:43 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-26T21:50:44 EDT" duration-ms="313" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Check if user able to update a record with valid submission Id and request body"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["update request on All Modules positive scenarios"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[1 expectation failed.
+Expected status code <200> but was <400>.
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: 1 expectation failed.
+Expected status code <200> but was <400>.
+
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+at stepdefinition.PutRequest.request_should_be_successful_with_status_code200(PutRequest.java:132)
+at ✽.Request should be successful with status code200(file:///Users/srihari/GitHub/Team11_RestAPI/src/test/java/features/04PutRequest_positive.feature:11)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-26T21:50:44 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-26T21:50:44 EDT" duration-ms="255" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Check if user able to update a grade assignment with valid submission Id and request body"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["update request on All Modules positive scenarios"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-26T21:50:44 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-26T21:50:44 EDT" duration-ms="255" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Check if user able to update a records with valid Assignment Id and request body"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["update request on All Modules positive scenarios"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-26T21:50:44 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-26T21:50:45 EDT" duration-ms="244" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -563,14 +694,353 @@ at ✽.User receives  status code200 ok with message(file:///Users/srihari/GitHu
             </param>
             <param index="1">
               <value>
-                <![CDATA["Title of your feature"]]>
+                <![CDATA["update request on All Modules positive scenarios"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-25T20:49:24 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-25T20:49:25 EDT" duration-ms="214" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-26T21:50:45 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-26T21:50:45 EDT" duration-ms="270" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Check if user able to update a batch with valid batch Id and request body"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["update request on All Modules positive scenarios"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-26T21:50:45 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-26T21:50:45 EDT" duration-ms="247" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Check if user able to update a program with valid program name and request body"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["update request on All Modules positive scenarios"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-26T21:50:45 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-26T21:50:45 EDT" duration-ms="249" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Check if user able to update a program with valid program Id and request body"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["update request on All Modules positive scenarios"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-26T21:50:45 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-26T21:50:46 EDT" duration-ms="252" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Check if user able to update a userroleprogram batch with valid User Id and request body"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["update request on All Modules positive scenarios"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[1 expectation failed.
+Expected status code <200> but was <400>.
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: 1 expectation failed.
+Expected status code <200> but was <400>.
+
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+at stepdefinition.PutRequest.request_should_be_successful_with_status_code200(PutRequest.java:132)
+at ✽.Request should be successful with status code200(file:///Users/srihari/GitHub/Team11_RestAPI/src/test/java/features/04PutRequest_positive.feature:85)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-26T21:50:46 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-26T21:50:47 EDT" duration-ms="1610" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["check if user able to create a new user with valid endpoint and request body"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["update request on All Modules positive scenarios"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-26T21:50:47 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-26T21:50:48 EDT" duration-ms="469" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Check if user able to update a user rolestatus with valid User Id and request body"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["update request on All Modules positive scenarios"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-26T21:50:48 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-26T21:50:48 EDT" duration-ms="253" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["check if user able to update a program with missing field"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["update all data with missing fields and valid ids-  Negative Scenarios"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-26T21:50:48 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-26T21:50:48 EDT" duration-ms="214" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["check if user able to update a program with missing field and valid program name"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["update all data with missing fields and valid ids-  Negative Scenarios"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-26T21:50:48 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-26T21:50:48 EDT" duration-ms="236" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["check if user able to update a batch with missing field"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["update all data with missing fields and valid ids-  Negative Scenarios"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-26T21:50:48 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-26T21:50:49 EDT" duration-ms="394" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Check if user able to update a user with missing fields"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["update all data with missing fields and valid ids-  Negative Scenarios"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-26T21:50:49 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-26T21:50:49 EDT" duration-ms="227" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Check if user able to update a user role status with missing data"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["update all data with missing fields and valid ids-  Negative Scenarios"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-26T21:50:49 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-26T21:50:49 EDT" duration-ms="237" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Check if user able to assign user to program batch with missing data"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["update all data with missing fields and valid ids-  Negative Scenarios"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-26T21:50:49 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-26T21:50:49 EDT" duration-ms="218" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Check if user able to assign user to program batch with invalid ID"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["update all data with missing fields and valid ids-  Negative Scenarios"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-26T21:50:49 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-26T21:50:50 EDT" duration-ms="237" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Check if user able to update a Assignment with missing fields"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["update all data with missing fields and valid ids-  Negative Scenarios"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-26T21:50:50 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-26T21:50:50 EDT" duration-ms="248" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Check if user able to resubmit with missing fields and request body"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["update all data with missing fields and valid ids-  Negative Scenarios"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-26T21:50:50 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-26T21:50:50 EDT" duration-ms="260" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Check if user able to update a grades with missing fields"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["update all data with missing fields and valid ids-  Negative Scenarios"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-26T21:50:50 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-26T21:50:50 EDT" duration-ms="255" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Check if user able to delete a submission with valid ID"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Delete request on All Modules positive scenarios"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-26T21:50:50 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-26T21:50:51 EDT" duration-ms="239" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Check if user able to delete a Assignment with valid assignment ID"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Delete request on All Modules positive scenarios"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-26T21:50:51 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-26T21:50:51 EDT" duration-ms="232" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Check if user able to delete a user with valid user ID"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Delete request on All Modules positive scenarios"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-26T21:50:51 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-26T21:50:51 EDT" duration-ms="223" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -586,55 +1056,7 @@ at ✽.User receives  status code200 ok with message(file:///Users/srihari/GitHu
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-25T20:49:25 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-25T20:49:25 EDT" duration-ms="222" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Check if user able to delete a batch with valid assignment ID"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Delete request on All Modules positive scenarios"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-25T20:49:25 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-25T20:49:25 EDT" duration-ms="220" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Check if user able to delete a batch with valid user ID"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Delete request on All Modules positive scenarios"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-25T20:49:25 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-25T20:49:25 EDT" duration-ms="242" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Check if user able to delete a batch with valid batch ID"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Delete request on All Modules positive scenarios"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-25T20:49:25 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-25T20:49:26 EDT" duration-ms="231" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-26T21:50:51 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-26T21:50:52 EDT" duration-ms="373" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -650,7 +1072,7 @@ at ✽.User receives  status code200 ok with message(file:///Users/srihari/GitHu
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-25T20:49:26 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-25T20:49:26 EDT" duration-ms="855" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-26T21:50:52 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-26T21:50:52 EDT" duration-ms="986" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -666,7 +1088,7 @@ at ✽.User receives  status code200 ok with message(file:///Users/srihari/GitHu
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-25T20:49:26 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-25T20:49:27 EDT" duration-ms="220" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-26T21:50:52 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-26T21:50:53 EDT" duration-ms="457" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -682,7 +1104,7 @@ at ✽.User receives  status code200 ok with message(file:///Users/srihari/GitHu
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-25T20:49:27 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-25T20:49:27 EDT" duration-ms="225" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-26T21:50:53 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-26T21:50:53 EDT" duration-ms="470" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -698,7 +1120,7 @@ at ✽.User receives  status code200 ok with message(file:///Users/srihari/GitHu
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-25T20:49:27 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-25T20:49:27 EDT" duration-ms="291" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-26T21:50:53 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-26T21:50:54 EDT" duration-ms="382" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -714,7 +1136,39 @@ at ✽.User receives  status code200 ok with message(file:///Users/srihari/GitHu
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-25T20:49:27 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-25T20:49:27 EDT" duration-ms="227" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-26T21:50:54 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-26T21:50:54 EDT" duration-ms="426" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Check if user able to retrieve a batch by invalid name"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Positive Scenarios of All modules Get requests"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-26T21:50:54 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-26T21:50:55 EDT" duration-ms="293" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Check if user able to retrieve a batch by invalid program ID"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Positive Scenarios of All modules Get requests"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-26T21:50:55 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-26T21:50:55 EDT" duration-ms="392" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -730,7 +1184,7 @@ at ✽.User receives  status code200 ok with message(file:///Users/srihari/GitHu
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-25T20:49:27 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-25T20:49:28 EDT" duration-ms="215" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-26T21:50:55 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-26T21:50:55 EDT" duration-ms="261" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -746,7 +1200,7 @@ at ✽.User receives  status code200 ok with message(file:///Users/srihari/GitHu
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-25T20:49:28 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-25T20:49:28 EDT" duration-ms="221" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-26T21:50:55 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-26T21:50:55 EDT" duration-ms="294" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -762,7 +1216,7 @@ at ✽.User receives  status code200 ok with message(file:///Users/srihari/GitHu
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-25T20:49:28 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-25T20:49:28 EDT" duration-ms="241" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-26T21:50:55 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-26T21:50:56 EDT" duration-ms="288" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -778,7 +1232,7 @@ at ✽.User receives  status code200 ok with message(file:///Users/srihari/GitHu
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-25T20:49:28 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-25T20:49:28 EDT" duration-ms="208" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-26T21:50:56 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-26T21:50:56 EDT" duration-ms="251" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -794,7 +1248,7 @@ at ✽.User receives  status code200 ok with message(file:///Users/srihari/GitHu
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-25T20:49:28 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-25T20:49:29 EDT" duration-ms="216" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-26T21:50:56 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-26T21:50:56 EDT" duration-ms="214" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -810,7 +1264,7 @@ at ✽.User receives  status code200 ok with message(file:///Users/srihari/GitHu
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-25T20:49:29 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-25T20:49:29 EDT" duration-ms="219" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-26T21:50:56 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-26T21:50:57 EDT" duration-ms="330" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -826,7 +1280,7 @@ at ✽.User receives  status code200 ok with message(file:///Users/srihari/GitHu
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-25T20:49:29 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-25T20:49:29 EDT" duration-ms="205" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-26T21:50:57 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-26T21:50:57 EDT" duration-ms="267" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -869,15 +1323,15 @@ at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecific
 at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
 at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
 at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
-at stepdefinition.AllGet_NegativeSteps.user_receives_not_found404_message(AllGet_NegativeSteps.java:60)
-at ✽.User receives NotFound404 message(file:///Users/srihari/GitHub/Team11_RestAPI/src/test/java/features/06AllGet_NegativeScenarios.feature:67)
+at stepdefinition.AllGet_NegativeSteps.user_receives_not_found404_message(AllGet_NegativeSteps.java:68)
+at ✽.User receives NotFound404 message(file:///Users/srihari/GitHub/Team11_RestAPI/src/test/java/features/07AllGet_NegativeScenarios.feature:80)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-25T20:49:29 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-25T20:49:29 EDT" duration-ms="225" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-26T21:50:57 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-26T21:50:57 EDT" duration-ms="578" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -893,7 +1347,7 @@ at ✽.User receives NotFound404 message(file:///Users/srihari/GitHub/Team11_Res
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-25T20:49:29 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-25T20:49:30 EDT" duration-ms="305" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-26T21:50:57 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-26T21:50:58 EDT" duration-ms="356" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -909,7 +1363,7 @@ at ✽.User receives NotFound404 message(file:///Users/srihari/GitHub/Team11_Res
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-25T20:49:30 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-25T20:49:30 EDT" duration-ms="218" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-26T21:50:58 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-26T21:50:58 EDT" duration-ms="222" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -925,7 +1379,7 @@ at ✽.User receives NotFound404 message(file:///Users/srihari/GitHub/Team11_Res
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-25T20:49:30 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-25T20:49:30 EDT" duration-ms="203" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-26T21:50:58 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-26T21:50:58 EDT" duration-ms="214" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -941,7 +1395,7 @@ at ✽.User receives NotFound404 message(file:///Users/srihari/GitHub/Team11_Res
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-25T20:49:30 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-25T20:49:30 EDT" duration-ms="208" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-26T21:50:58 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-26T21:50:58 EDT" duration-ms="233" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -957,7 +1411,7 @@ at ✽.User receives NotFound404 message(file:///Users/srihari/GitHub/Team11_Res
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-25T20:49:30 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-25T20:49:30 EDT" duration-ms="204" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-26T21:50:58 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-26T21:50:59 EDT" duration-ms="233" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -973,7 +1427,7 @@ at ✽.User receives NotFound404 message(file:///Users/srihari/GitHub/Team11_Res
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-25T20:49:30 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-25T20:49:30 EDT" duration-ms="7" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-26T21:50:59 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-26T21:50:59 EDT" duration-ms="217" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -989,7 +1443,119 @@ at ✽.User receives NotFound404 message(file:///Users/srihari/GitHub/Team11_Res
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-25T20:49:30 EDT" name="tearDownClass" finished-at="2023-07-25T20:49:30 EDT" duration-ms="18" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-26T21:50:59 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-26T21:50:59 EDT" duration-ms="215" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["check if user able to update a program with invalid program name"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Put  Negative Scenarios"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-26T21:50:59 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-26T21:50:59 EDT" duration-ms="243" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["check if user able to update a batch with invalid ID"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Put  Negative Scenarios"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-26T21:50:59 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-26T21:51:00 EDT" duration-ms="307" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Check if user able to update a user with INvalid User Id and request body"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Put  Negative Scenarios"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-26T21:51:00 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-26T21:51:00 EDT" duration-ms="275" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Check if user able to update a user role status with Invalid User Id"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Put  Negative Scenarios"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-26T21:51:00 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-26T21:51:00 EDT" duration-ms="228" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Check if user able to update a Assignment with invalid AssignmentId and request body"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Put  Negative Scenarios"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-26T21:51:00 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-26T21:51:00 EDT" duration-ms="256" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Check if user able to update a submission with invalid submission Id and request body"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Put  Negative Scenarios"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-26T21:51:00 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-26T21:51:01 EDT" duration-ms="277" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Check if user able to update a grades with invalid submission Id and request body"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Put  Negative Scenarios"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:testrunner.testRunner$TestRunner@6e171cd7]" started-at="2023-07-26T21:51:01 EDT" name="tearDownClass" finished-at="2023-07-26T21:51:13 EDT" duration-ms="12617" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

@@ -1,9 +1,11 @@
-@update
-Feature: Title of your feature
-  I want to use this template for my feature file
+@update_AllModules
+Feature: update request on All Modules positive scenarios
+
+ Background: User sets Authorization
+			Given User sets authorization to NO Auth
 
   @UpdateAssignmentSubmit
-  Scenario Outline: Check if user able to update a user with valid submission Id and request body
+  Scenario Outline: Check if user able to update a record with valid submission Id and request body
     Given user creates put request on Assignmentsubmit "<testcaseName>" and "<Sheetname>"
     When user call "updateAssignsubmit" with "putAssignsubmit" http request to update
     Then Request should be successful with status code200
@@ -99,7 +101,7 @@ Feature: Title of your feature
   
 
   @updatebyuserrolestatus
-  Scenario Outline: Check if user able to update a user with valid User Id and request body
+  Scenario Outline: Check if user able to update a user rolestatus with valid User Id and request body
     Given user creates put request on user for changing role status  "<testcaseName>" and "<Sheetname>"
     When user call "updateuserrolestatus" with "PutforUserrolestatus" http request to update
     Then Request should be successful with status code200

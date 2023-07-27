@@ -30,6 +30,18 @@ Scenario: Check if user able to retrieve a batch by ID
     When User calls "GetBAtchID" with "getByBatchID" HTTPS Request for get
     Then User receives  status code200 ok with message
     
+     @batch_GetByname
+Scenario: Check if user able to retrieve a batch by name
+    Given User creates GET Request for the LMS API endpoint
+    When User calls "GetbatchName" with "getByBatchName" HTTPS Request for get
+    Then User receives  status code200 ok with message
+    
+     @batch_GetByProgID
+Scenario: Check if user able to retrieve a batch by program ID
+    Given User creates GET Request for the LMS API endpoint
+    When User calls "GetbatchByProgID" with "getProgID" HTTPS Request for get
+    Then User receives  status code200 ok with message
+
 
   @User_ByID
   Scenario: Check if user able to retrieve a user with valid User ID
