@@ -1,0 +1,50 @@
+pipeline {
+    agent any
+
+    tools {
+       
+        maven "MAVAEN_HOME"
+    }
+
+    stages
+    {
+        stage('Git')
+        {
+            steps 
+            {
+              git 'https://github.com/Kaviya-Ramalingam/Team11_RestAPI.git'
+             }
+        }
+         stage('compile')
+        {
+            steps 
+            {
+              bat "mvn compile"
+             }
+        }
+         stage('clean')
+        {
+            steps 
+            {
+            bat '''mvn clean
+'''
+             }
+        }
+         stage('test')
+        {
+            steps 
+            {
+             bat 'mvn test -D cucumber.options="--tags @AllPost"'
+             }
+        }
+         stage('report')
+        {
+            steps 
+            {
+             allure includeProperties: false, jdk: '', results: [[path: 'allure-results']]
+             }
+        }
+        
+           
+        }
+}   
