@@ -17,7 +17,20 @@ Scenario: Check if user able to retrieve a batch by Invalid ID
     When User calls "GetBAtchID" with "getByBatchID" HTTPS Request for Negative get request
     Then User receives NotFound404 message
  
-  
+    
+     @batch_GetByname
+Scenario: Check if user able to retrieve a batch by invalid name
+    Given User creates GET Request for invalid inputs the LMS API endpoint
+    When User calls "GetbatchName" with "getByBatchName" HTTPS Request for Negative get request
+    Then User receives NotFound404 message
+    
+     @batch_GetByProgID
+Scenario: Check if user able to retrieve a batch by invalid program ID
+    Given User creates GET Request for invalid inputs the LMS API endpoint
+    When User calls "GetbatchByProgID" with "getProgID" HTTPS Request for Negative get request
+    Then User receives NotFound404 message
+
+    
  @GetUser_InvalidID
 Scenario: Check if user able to retrieve a user with Invalid User ID
 Given User creates GET Request for invalid inputs the LMS API endpoint

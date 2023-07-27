@@ -6,7 +6,7 @@ Feature: Delete request on All Modules positive scenarios
 			Given User sets authorization to NO Auth
 			
  @submitdelbyid
-  	Scenario: Check if user able to delete a batch with valid batch ID
+  	Scenario: Check if user able to delete a submission with valid ID
     Given User creates DELETE Request for the LMS API endpoint
     When User calls "DelSubmitID" with "deletesubmitid" HTTPS Request
     Then User receives 200Ok status with message
@@ -14,13 +14,13 @@ Feature: Delete request on All Modules positive scenarios
  
  
   @Assignmentdelbyid
-  	Scenario: Check if user able to delete a batch with valid assignment ID
+  	Scenario: Check if user able to delete a Assignment with valid assignment ID
     Given User creates DELETE Request for the LMS API endpoint
     When User calls "DeleteassignID" with "deleteassignid" HTTPS Request
     Then User receives 200Ok status with message
     
     @userdelbyid
-  Scenario: Check if user able to delete a batch with valid user ID
+  Scenario: Check if user able to delete a user with valid user ID
     Given User creates DELETE Request for the LMS API endpoint
     When User calls "DeleteUserID" with "deleteuserid" HTTPS Request
     Then User receives 200Ok status with message
