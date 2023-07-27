@@ -3,6 +3,7 @@ package stepdefinition;
 import static io.restassured.RestAssured.given;
 
 import java.io.IOException;
+import java.util.HashMap;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -16,6 +17,7 @@ import utilities.API_enum;
 import utilities.ExcelWriter;
 
 import utilities.TestData2;
+
 import utilities.Utils;
 
 public class PutRequest extends Utils {
@@ -27,6 +29,21 @@ public class PutRequest extends Utils {
 	
 	TestData2 data=new TestData2();
 	
+	
+	@Given("user creates put request on Assignmentsubmit {string} and {string}")
+	public void user_creates_put_request_on_assignmentsubmit_and(String testcaseName, String Sheetname) throws IOException {
+		
+		
+		
+		req1 = given().spec(requestSpecification()).body(data.assignsubmitPut(testcaseName,Sheetname));
+		res1=new ResponseSpecBuilder().expectStatusCode(200).build();
+	}
+	
+	@Given("user creates put request on Grade Assignmentsubmit {string} and {string}")
+	public void user_creates_put_request_on_grade_assignmentsubmit_and(String testcaseName, String Sheetname) throws IOException {
+		req1 = given().spec(requestSpecification()).body(data.assignsubmitPut(testcaseName,Sheetname));
+		res1=new ResponseSpecBuilder().expectStatusCode(200).build();
+	}
 	
 	@Given("user creates put request on Assignment  {string} and {string}")
 	public void user_creates_put_request_on_assignment_and(String testcaseName, String Sheetname) throws IOException 
@@ -43,8 +60,22 @@ public class PutRequest extends Utils {
 	@Given("user creates put request for UserRoleProgramBatchStatus the LMS API endpoint from  {string} and {string}")
 	public void user_creates_put_request_for_user_role_program_batch_status_the_lms_api_endpoint_from_and(String testcaseName, String Sheetname) throws IOException {
 	   
-		req1 = given().spec(requestSpecification()).body(data.UserPutprogbathstatus(testcaseName,Sheetname));
-		res1=new ResponseSpecBuilder().expectStatusCode(200).build();
+		HashMap<String,Object> parent=new HashMap<String,Object>();
+		
+		HashMap<String,Object> map=new HashMap<String,Object>();
+		map.put("batchId",PostRequestSteps.bacthId_env);
+		map.put("userRoleProgramBatchStatus","Online");
+		
+		Object[] maparray=new Object[1];
+		maparray[0]=map;
+		
+		parent.put("programId",PostRequestSteps.progID_env);
+		parent.put("roleId","R02");
+		parent.put("userId",PostRequestSteps.userId_env);
+		parent.put("userRoleProgramBatches",maparray);
+		req1 = given().spec(requestSpecification()).body(parent);
+		/*req1 = given().spec(requestSpecification()).body(data.UserPutprogbathstatus(testcaseName,Sheetname));
+		res1=new ResponseSpecBuilder().expectStatusCode(200).build();*/
 		
 	}
 	
@@ -76,9 +107,9 @@ public class PutRequest extends Utils {
 		if (method.equalsIgnoreCase("PutUser"))
 		response = req1.put(resource_api.getresource()+PostRequestSteps.userId_env);
 		else if (method.equalsIgnoreCase("PutforUserrolestatus"))
-			response = req1.put(resource_api.getresource()+"U7876");
+			response = req1.put(resource_api.getresource()+PostRequestSteps.userId_env);
 		else if (method.equalsIgnoreCase("PutUserprogbatch"))
-			response = req1.put(resource_api.getresource()+"U8618");
+			response = req1.put(resource_api.getresource()+PostRequestSteps.userId_env);
 		else if (method.equalsIgnoreCase("PutProgram"))
 			response = req1.put(resource_api.getresource()+PostRequestSteps.progID_env);
 		else if (method.equalsIgnoreCase("PutProgramname"))
@@ -87,17 +118,19 @@ public class PutRequest extends Utils {
 			response = req1.put(resource_api.getresource()+PostRequestSteps.bacthId_env);
 		else if (method.equalsIgnoreCase("putAssign"))
 			response = req1.put(resource_api.getresource()+PostRequestSteps.AssignId_env);
+		else if (method.equalsIgnoreCase("putAssignsubmit"))
+			response = req1.put(resource_api.getresource()+PostRequestSteps.submitID_env);
 	
-	
+		
 		//System.out.println(PostRequestSteps.userId_env);
 	}
 
-	@Then("Request should be successful with status code 200user Role status Update")
-	public void request_should_be_successful_with_status_code_200user_role_status_update() 
+	@Then("Request should be successful with status code200")
+	public void request_should_be_successful_with_status_code200() 
 	
 	{
-		response.then().assertThat().header("Content-Type","application/json")
-		.statusCode(200);
+		response.then().assertThat().statusCode(200)
+		.log().all();
 		
 	}
 	

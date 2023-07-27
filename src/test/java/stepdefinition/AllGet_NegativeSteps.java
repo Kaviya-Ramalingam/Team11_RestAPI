@@ -51,6 +51,14 @@ public class AllGet_NegativeSteps extends Utils {
 		{
 		response = req1.get(resource_api.getresource()+ PostRequestSteps.progID_env);
 		}
+		else if (method.equalsIgnoreCase("getInvalidBatchID"))
+		{
+		response = req1.get(resource_api.getresource()+786);
+		}
+		else if (method.equalsIgnoreCase("getByBatchName"))
+		{
+		response = req1.get(resource_api.getresource()+PostRequestSteps.bname_env);
+		}
 	}
 
 	@Then("User receives NotFound404 message")

@@ -1,6 +1,9 @@
 package utilities;
 
 import java.io.IOException;
+import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Random;
@@ -10,24 +13,92 @@ import stepdefinition.PostRequestSteps;
 public class TestData2 {
 	
 	ExcelUtility e2=new ExcelUtility("./src/test/resources/Response_data.xlsx");
-	public  HashMap<String,Object> programPut(String testcaseName,String sheetname) throws IOException
+	ExcelUtility e3=new ExcelUtility("./src/test/resources/Team11_TestData.xlsx");
+	
+	
+	public  HashMap<String, Object> assignsubmitPut(String testcaseName,String Sheetname) throws IOException
 	{
+		List<String> data=e3.getData(testcaseName,Sheetname);
+		
+		final SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		Timestamp sub_datestamp = new Timestamp(System.currentTimeMillis());
+		Calendar cal = Calendar.getInstance();
+		//submit date is +2 days of current date
+		cal.setTimeInMillis(sub_datestamp.getTime());
+	    cal.add(Calendar.DAY_OF_MONTH,2);
+	    sub_datestamp = new Timestamp(cal.getTime().getTime());
+		
+		 Timestamp grade_stamp = new Timestamp(System.currentTimeMillis());
+		    cal.setTimeInMillis(grade_stamp.getTime());
+		    cal.add(Calendar.DAY_OF_MONTH,8);
+		    grade_stamp = new Timestamp(cal.getTime().getTime());
+		
+		HashMap<String,Object> submitdataput=new HashMap<String,Object>();
 		
 		
-		//List<String> data=e2.getData(testcaseName,sheetname);
-		Random randomNum = new Random();
-		String prog_name="Jul23-GoogleSurvivors-SDET-"+randomNum.nextInt(10);
-		String prog_Des="Jul23-GoogleSurvivors-SDET-"+randomNum.nextInt(10);
 		
-		HashMap<String,Object> programdataput=new HashMap<String, Object>();
-		programdataput.put("programDescription",prog_Des);
+		submitdataput.put("assignmentId",PostRequestSteps.AssignId_env);
+		submitdataput.put("userId",PostRequestSteps.userId_env);
+		submitdataput.put("subDesc","Submitted");
 		
-		programdataput.put("programName",prog_name);
-		programdataput.put("programStatus","active");
+		submitdataput.put("subComments",data.get(2));
+		submitdataput.put("subPathAttach1",data.get(3));
+		submitdataput.put("subPathAttach2",data.get(4) );
+		submitdataput.put("subPathAttach3",data.get(5));
+		submitdataput.put("subPathAttach4",data.get(6));
+		submitdataput.put("subPathAttach5",data.get(7));
+		submitdataput.put("subDateTime",sdf.format(sub_datestamp));
+		submitdataput.put("gradedBy",PostRequestSteps.userId_env);
+		submitdataput.put("gradedDateTime",sdf.format(grade_stamp));
+		submitdataput.put("grade",2);
 		
 		
-		System.out.println(programdataput);
-		return programdataput;
+		
+		System.out.println(submitdataput);
+	
+		return submitdataput;
+	}
+	public  HashMap<String, Object> gradeAssignPut(String testcaseName,String Sheetname) throws IOException
+	{
+		List<String> data=e3.getData(testcaseName,Sheetname);
+		
+		final SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		Timestamp sub_datestamp = new Timestamp(System.currentTimeMillis());
+		Calendar cal = Calendar.getInstance();
+		//submit date is +2 days of current date
+		cal.setTimeInMillis(sub_datestamp.getTime());
+	    cal.add(Calendar.DAY_OF_MONTH,2);
+	    sub_datestamp = new Timestamp(cal.getTime().getTime());
+		
+		 Timestamp grade_stamp = new Timestamp(System.currentTimeMillis());
+		    cal.setTimeInMillis(grade_stamp.getTime());
+		    cal.add(Calendar.DAY_OF_MONTH,8);
+		    grade_stamp = new Timestamp(cal.getTime().getTime());
+		
+		HashMap<String,Object> submitdataput=new HashMap<String,Object>();
+		
+		
+		
+		submitdataput.put("assignmentId",PostRequestSteps.AssignId_env);
+		submitdataput.put("userId",PostRequestSteps.userId_env);
+		submitdataput.put("subDesc","Submitted");
+		
+		submitdataput.put("subComments",data.get(2));
+		submitdataput.put("subPathAttach1",data.get(3));
+		submitdataput.put("subPathAttach2",data.get(4) );
+		submitdataput.put("subPathAttach3",data.get(5));
+		submitdataput.put("subPathAttach4",data.get(6));
+		submitdataput.put("subPathAttach5",data.get(7));
+		submitdataput.put("subDateTime",sdf.format(sub_datestamp));
+		submitdataput.put("gradedBy","");
+		submitdataput.put("gradedDateTime","");
+		submitdataput.put("grade",2);
+		
+		
+		
+		System.out.println(submitdataput);
+	
+		return submitdataput;
 	}
 	
 	public  HashMap<String, Object> UserPut(String testcaseName,String Sheetname) throws IOException
@@ -67,15 +138,15 @@ public class TestData2 {
 		HashMap<String,Object> parent=new HashMap<String,Object>();
 		
 		HashMap<String,Object> map=new HashMap<String,Object>();
-		map.put("batchId","7259");
-		map.put("userRoleProgramBatchStatus","active");
+		map.put("batchId",PostRequestSteps.bacthId_env);
+		map.put("userRoleProgramBatchStatus","Active");
 		
 		Object[] maparray=new Object[1];
 		maparray[0]=map;
 		
-		parent.put("programId",10689);
-		parent.put("roleId","7980");
-		parent.put("userId","U7876");
+		parent.put("programId",PostRequestSteps.progID_env);
+		parent.put("roleId","R01");
+		parent.put("userId",PostRequestSteps.userId_env);
 		parent.put("userRoleProgramBatches",maparray);
 		
 		
@@ -86,26 +157,17 @@ public class TestData2 {
 	//get request
 	public  HashMap<String, Object> Updaterolestatus(String testcaseName,String Sheetname) throws IOException
 	{
+		
 		HashMap<String,Object> userdataput=new HashMap<String,Object>();
-		userdataput.put("roleId","U7876");
-		userdataput.put("userRoleStatus","online");
+		userdataput.put("roleId","R03");
+		userdataput.put("userRoleStatus","Inactive");
 		System.out.println(userdataput);
 		return userdataput;
+		
+		
+		
 	}
-	public  HashMap<String, Object> ProgramPut(String testcaseName,String Sheetname) throws IOException
-	{
 	
-		Random randomNum = new Random();
-		String p_name="GoogleSurvivors-"+randomNum.nextInt(10);
-		String p_desc="Sdet-"+randomNum.nextInt(10);
-		HashMap<String,Object> progdataput=new HashMap<String,Object>();
-		progdataput.put("programDescription",p_desc);
-		progdataput.put("programId",PostRequestSteps.progID_env);
-		progdataput.put("programName",p_name);
-		progdataput.put("programStatus","active");
-		System.out.println(progdataput);
-		return progdataput;
-	}
 	
 	
 	public  HashMap<String, Object> batchPut(String testcaseName,String Sheetname) throws IOException
@@ -132,9 +194,9 @@ public class TestData2 {
 		assigndataput.put("assignmentDescription",data.get(1));
 		assigndataput.put("assignmentId",data.get(2));
 		assigndataput.put("assignmentName",data.get(3));
-		assigndataput.put("batchId",data.get(4));
+		assigndataput.put("batchId",PostRequestSteps.bacthId_env);
 		assigndataput.put("comments","aaaa");
-		assigndataput.put("createdBy",data.get(5));
+		assigndataput.put("createdBy",PostRequestSteps.userId_env);
 		assigndataput.put("dueDate",data.get(6));
 		assigndataput.put("graderId",data.get(7));
 		assigndataput.put("pathAttachment1","/Users/srihari/API/file1.json");
@@ -147,7 +209,42 @@ public class TestData2 {
 		
 	}
 	
+	
+	
+	public  HashMap<String,Object> programPut(String testcaseName,String sheetname) throws IOException
+	{
+		
+		
+		
+		Random randomNum = new Random();
+		String prog_name="Jul23-GoogleSurvivors-SDET-"+randomNum.nextInt(10);
+		String prog_Desc="Jul23-GoogleSurvivors-SDET-"+randomNum.nextInt(10);
+		
+		
+		HashMap<String,Object> programdataput=new HashMap<String, Object>();
+		programdataput.put("programDescription", prog_Desc);
+		//programdataput.put("programId",PostRequestSteps.progID_env);
+		programdataput.put("programName",prog_name);
+		programdataput.put("programStatus","inactive");
+		
+		
+		System.out.println(programdataput);
+		return programdataput;
+	}
+	public  HashMap<String, Object> ProgramPut(String testcaseName,String Sheetname) throws IOException
+	{
+	
+		Random randomNum = new Random();
+		String p_name="GoogleSurvivors-"+randomNum.nextInt(10);
+		String p_desc="Sdet-"+randomNum.nextInt(10);
+		HashMap<String,Object> progdataput=new HashMap<String,Object>();
+		progdataput.put("programDescription",p_desc);
+		progdataput.put("programId",PostRequestSteps.progID_env);
+		progdataput.put("programName",p_name);
+		progdataput.put("programStatus","active");
+		System.out.println(progdataput);
+		return progdataput;
+	}
+	
+	
 }
-
-
-

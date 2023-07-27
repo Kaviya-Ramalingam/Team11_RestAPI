@@ -63,6 +63,10 @@ public class AllGet_PositiveSteps extends Utils {
 		{
 		response = req1.get(resource_api.getresource()+PostRequestSteps.progID_env);
 		}
+		else if (method.equalsIgnoreCase("getByBatchName"))
+		{
+		response = req1.get(resource_api.getresource()+PostRequestSteps.bname_env);
+		}
 	}
 
 	@Then("User receives  status code200 ok with message")

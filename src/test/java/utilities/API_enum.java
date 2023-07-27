@@ -8,6 +8,8 @@ public enum API_enum {
 	GetByProgID("/programs/"),
 	GetAllBatches("/batches"),
 	GetBAtchID("/batches/batchId/"),
+	GetbatchByProgID("/batches/program/"),
+	GetbatchName("/batches/batchName/"),
 	AddUsers("/users/users/roleStatus"),
 	AddAssignment("/assignments"),
 	SubmitAssgn("/assignmentsubmission"),
@@ -37,9 +39,9 @@ public enum API_enum {
 	updateprogram("/putprogram/"),
 	updateprogramname("/program/"),
 	updatebatchbyid("/batches/"),
-	updateAssign("/assignments/");
-	
-	
+	updateAssign("/assignments/"),
+	updateAssignsubmit("/assignmentsubmission/"),
+	putgradeAssignment("/assignmentsubmission/gradesubmission/"); 
      
 
 	private String resource;
