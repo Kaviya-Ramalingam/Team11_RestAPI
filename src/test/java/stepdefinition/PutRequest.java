@@ -60,22 +60,9 @@ public class PutRequest extends Utils {
 	@Given("user creates put request for UserRoleProgramBatchStatus the LMS API endpoint from  {string} and {string}")
 	public void user_creates_put_request_for_user_role_program_batch_status_the_lms_api_endpoint_from_and(String testcaseName, String Sheetname) throws IOException {
 	   
-		HashMap<String,Object> parent=new HashMap<String,Object>();
-		
-		HashMap<String,Object> map=new HashMap<String,Object>();
-		map.put("batchId",PostRequestSteps.bacthId_env);
-		map.put("userRoleProgramBatchStatus","Online");
-		
-		Object[] maparray=new Object[1];
-		maparray[0]=map;
-		
-		parent.put("programId",PostRequestSteps.progID_env);
-		parent.put("roleId","R02");
-		parent.put("userId",PostRequestSteps.userId_env);
-		parent.put("userRoleProgramBatches",maparray);
-		req1 = given().spec(requestSpecification()).body(parent);
-		/*req1 = given().spec(requestSpecification()).body(data.UserPutprogbathstatus(testcaseName,Sheetname));
-		res1=new ResponseSpecBuilder().expectStatusCode(200).build();*/
+	
+		req1 = given().spec(requestSpecification()).body(data.UserPutprogbathstatus(testcaseName,Sheetname));
+		res1=new ResponseSpecBuilder().expectStatusCode(200).build();
 		
 	}
 	

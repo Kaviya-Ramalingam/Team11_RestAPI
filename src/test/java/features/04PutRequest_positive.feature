@@ -36,6 +36,16 @@ Feature: update request on All Modules positive scenarios
     Examples: 
       | testcaseName   | Sheetname       |
       | assignupdate10 | Response_Assign |
+      
+       @updatebybatchid
+  Scenario Outline: Check if user able to update a batch with valid batch Id and request body
+    Given user creates put request on bath for the LMS API endpoint from bath id "<testcaseName>" and "<Sheetname>"
+    When user call "updatebatchbyid" with "Putbatchid" http request to update
+    Then Request should be successful with status code200
+
+    Examples: 
+      | testcaseName  | Sheetname      |
+       | batchupdate10 | Response_Batch |
 
   @updatebyuserid
   Scenario Outline: Check if user able to update a user with valid User Id and request body
@@ -47,15 +57,7 @@ Feature: update request on All Modules positive scenarios
       | testcaseName | Sheetname     |
       | Userupdate10 | Response_User |
 
-  @updatebybatchid
-  Scenario Outline: Check if user able to update a batch with valid batch Id and request body
-    Given user creates put request on bath for the LMS API endpoint from bath id "<testcaseName>" and "<Sheetname>"
-    When user call "updatebatchbyid" with "Putbatchid" http request to update
-    Then Request should be successful with status code200
-
-    Examples: 
-      | testcaseName  | Sheetname      |
-      | batchupdate10 | Response_Batch |
+ 
 
   @updatebyprogramname
   Scenario Outline: Check if user able to update a program with valid program name and request body
