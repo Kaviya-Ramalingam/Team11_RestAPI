@@ -10,13 +10,13 @@ Feature: update all data with missing fields and valid ids-  Negative Scenarios
   Scenario: check if user able to update a program with missing field
     Given user creates PUT request with missing data for the LMS API endpoint
     When user calls "updateprogram" with "PutProgram" http request for Put
-   # Then User receives 400BadRequest status code with message and boolean success details
+    Then User receives 400BadRequest status code with message and boolean success details
     
     @ProgPutname_missingField
 	  Scenario: check if user able to update a program with missing field and valid program name
 	    Given user creates PUT request with missing data and valid name for the LMS API endpoint
 	    When user calls "updateprogramname" with "PutProgramname" http request for Put
-	    #Then User receives 400BadRequest status code with message and boolean success details
+	    Then User receives 400BadRequest status code with message and boolean success details
 	    
 	    @batchPut_missingField
   Scenario: check if user able to update a batch with missing field
