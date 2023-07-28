@@ -15,7 +15,7 @@ Background: User sets Authorization
    Examples: 
 |testcaseName|Sheetname|
 | Prog_1  |   Program |
-#| Prog_2  |   Program|
+| Prog_2  |   Program|
 
 @batchpost
   Scenario Outline: check if user able to create a batch with valid endpoint and request body
@@ -32,13 +32,38 @@ Background: User sets Authorization
 @Userpost
   Scenario Outline: check if user able to create a new user with valid endpoint and request body
     Given user creates User POST request for the LMS API endpoint from  "<testcaseName>" and "<Sheetname>"
-    When user call "AddUsers" with "post" http request 
+    When user call "AddUsers" with "post" http request
     Then API call for User module is success with status code201
     Then verify the userID in json Response body
     
    Examples: 
 |testcaseName|Sheetname|
 | User_1  |   User |
-| User_2  |   User|
-| User_3  |   User|
+#| User_3  |   User|
+#| User_2  |   User|
+
+@AssignmentPost
+ Scenario Outline: check if user able to add a record with valid endpoint and request body
+    Given user creates Assignment POST request for the LMS API endpoint from  "<testcaseName>" and "<Sheetname>"
+    When user call "AddAssignment" with "post" http request
+    Then User receives status code201 as success 
+    Then store the AssignID from json Response body
+    
+   Examples: 
+|testcaseName|Sheetname|
+| Assign_1 |   Assignment |
+#| Assign_2  |   Assignment|
+
+@SubmitAssignPost
+ Scenario Outline: check if user able to submit an assignment with valid endpoint and request body
+    Given user creates Submit Assign POST request for the LMS API endpoint from  "<testcaseName>" and "<Sheetname>"
+    When user call "SubmitAssgn" with "post" http request
+    Then User receives success code with response body
+    Then store the SubmissionID from json Response body
+    
+   Examples: 
+|testcaseName|Sheetname|
+| AssignSubmit_1 |   Assignmnet_Submit |
+#| AssignSubmit_2  |   Assignmnet_Submit|
+
 
